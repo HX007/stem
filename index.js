@@ -2,12 +2,14 @@
 for(var a=0;a<$(".activeText").find("i").length;a++){
 	$(".activeText").find("i")[a].style.backgroundPosition = -16*a+"px"+" 0px"
 }
+
 //轮播图
 var $Left = $(".lunbo .arrowsLeft")
 var $Right = $(".lunbo .arrowsRight")
 var $box = $(".bigBox").find(".box")
 var dot = $(".lunbo .dot")
 var x=0// 记录盒子位置
+var y=0
 //初始化span点击小方块
 for(var a=0;a<$box.length;a++){
 	var $dot = $("<span></span>")//创建
@@ -33,7 +35,6 @@ $dotList.click(function(){
 	$dotList.eq(x).addClass("focus") //span加样式
 })
 
-
 //向右代码段
 function right(){
 	hidden()
@@ -41,7 +42,7 @@ function right(){
 	if(x==$box.length){
 		x = 0
 	}
-	$box.eq(x).fadeIn(800)
+	$box.eq(x).fadeIn(500)
 	$dotList.eq(x).addClass("focus")
 }
 // 向右点击
@@ -57,8 +58,8 @@ $Left.click(function(){
 	if(x==-1){
 		x = $box.length-1
 	}
-	$box.eq(x).fadeIn()
-	dotList.eq(x).addClass("focus")
+	$box.eq(x).fadeIn(500)
+	$dotList.eq(x).addClass("focus")
 })
 // 鼠标移上的核心
 $box.mouseenter(function(){
@@ -83,6 +84,26 @@ $box.mouseenter(function(){
 		var index = $(this).attr("index")
 		$imgImgList.eq(index).hide()	//隐藏
 	})
+	//让右边section小区块显示
+	$(this).find(".section").fadeIn()
+	//获取四张图片
+	var $fourList = $(this).find(".section .four img")
+	//小图片计时器，永不停息
+	somalImg = setInterval(function(){
+		for(var a=0;a<$fourList.length;a++){
+			$fourList.eq(a).hide()
+		}
+		if(y==$fourList.length-1){
+			y = 0
+		}else{
+			y++
+		}
+		$fourList.eq(y).fadeIn(200)
+	},2000)
+})
+$box.mouseleave(function(){
+	$(this).find(".section").hide()
+	clearInterval(somalImg)
 })
 //计时器
 function auto(){
@@ -91,12 +112,23 @@ function auto(){
 	},3000)	
 }
 auto();//开启计时器
-//鼠标离开，开启计时器
+//鼠标离开bigBox，开启计时器
 $(".bigBox").mouseleave(function(){
 	auto();
 })
-//鼠标移上，关闭计时器
+//鼠标移上bigBox，关闭计时器
 $(".bigBox").mouseenter(function(){
 	clearInterval(autoplay)
 })
+//鼠标离开dot，开启计时器
+$dotList.mouseleave(function(){
+	auto();
+})
+//鼠标移上dot，关闭计时器
+$dotList.mouseenter(function(){
+	clearInterval(autoplay)
+})
+
+
+
 
