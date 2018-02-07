@@ -321,19 +321,50 @@ body{
 	font-weight: 400;
 	padding: 10px 0;
 }
-.lunbo .box{
+.lunbo .bigBox{
+	position: relative;
+	width: 940px;
 	height: 353px;
-	box-shadow: 
+}
+.bigBox .box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 940px;
+	height: 353px;
+	display: none;
 }
 .box .img{
 	position: relative;
 	float: left;
 	width: 616px;
 	height: 353px;
+	box-shadow: 2px 0 5px #000;
+}
+.final .img{
 	background: url(images/final.jpg) no-repeat;
+}
+.boxi .img{
+	background: url(images/boxi.jpg) no-repeat;
+}
+.hizi .img{
+	background: url(images/hizi.jpg) no-repeat;
+}
+.nba .img{
+	background: url(images/nba.jpg) no-repeat;
+}
+.slay .img{
+	background: url(images/slay.jpg) no-repeat;
+}
+.sub .img{
+	background: url(images/sub.jpg) no-repeat;
+}
+.sword .img{
+	background: url(images/sword.jpg) no-repeat;
 }
 .box .img a{
 	display: block;
+	height: 353px;
 }
 .box .img img{
 	position: absolute;
@@ -341,7 +372,7 @@ body{
 	left: 0;
 	width: 616px;
 	height: 353px;
-	opacity: 0;
+	display: none;
 }
 .box .fig{
 	float: right;
@@ -363,15 +394,21 @@ body{
 .picture{
 	width: 314px;
 	height: 158px;
+}
+.picture a{
+	display: block;
+	float: left;
+}
+.picture a:nth-child(0dd){
 	padding-left: 10px;
 }
 .picture img{
 	display: block;
 	float: left;
+	opacity: .5;
 	width: 147px;
 	height: 69px;
 	padding: 10px 10px 0 0;
-	opacity: .5;
 }
 .picture img:hover{
 	opacity: 1;
@@ -446,13 +483,26 @@ body{
 
 
 
-
-
-
 .lunbo .dot{
 	height: 36px;
-	background-color: #0ff;
+	text-align: center;
 }
+
+.dot span{
+	display: inline-block;
+	margin: 12px 2px;
+	width: 15px;
+	height: 9px;
+	border-radius: 2px;
+	transition: background-color 0.2s;
+	background-color: hsla(202,60%,100%,0.2);
+	cursor: pointer;
+}
+.dot span.focus{
+	background-color: hsla(202,60%,100%,0.4);
+}
+
+
 .arrowsLeft,.arrowsRight{
 	position: absolute;
 	top: 50%;
