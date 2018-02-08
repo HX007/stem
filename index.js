@@ -9,7 +9,7 @@ var $Right = $(".lunbo .arrowsRight")
 var $box = $(".bigBox").find(".box")
 var dot = $(".lunbo .dot")
 var x=0// 记录盒子位置
-var y=0
+var y=0 //获取小图片位置
 //初始化span点击小方块
 for(var a=0;a<$box.length;a++){
 	var $dot = $("<span></span>")//创建
@@ -17,9 +17,11 @@ for(var a=0;a<$box.length;a++){
 	$dot.appendTo(dot)//插入JQ对象
 }
 var $dotList = dot.find("span")
+
 //默认显示
 $dotList.eq(0).addClass("focus")//第一个span
 $box.eq(0).show()//第一个盒子
+
 //隐藏全部盒子，隐藏span获焦样式
 function hidden(){
 	for(var a=0;a<$box.length;a++){

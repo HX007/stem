@@ -160,7 +160,7 @@ body{
 	font-size: 13px;
 	display: block;
 	color: #66c0f4;
-	padding: 4px 0;
+	padding: 3px 0;
 
 }
 .activeText i{
@@ -314,6 +314,7 @@ body{
 /***********************轮播图*************************/
 .lunbo{
 	position: relative;
+	margin-bottom: 20px;
 }
 .lunbo h2{
 	font-size: 17px;
@@ -321,19 +322,160 @@ body{
 	font-weight: 400;
 	padding: 10px 0;
 }
+.lunbo h2>a{
+	float: right;
+	color: #fff;
+}
+.lunbo h2 span{
+	display: inline-block;
+	padding: 0 15px;
+	font-size: 12px;
+	line-height: 20px;
+	background: transparent;
+	border: 1px solid rgba(255,255,255,0.4);
+	border-radius: 2px;
+	cursor: pointer;
+}
+.lunbo h2 span:hover{
+	border: 1px solid rgba(255,255,255,0.8);
+}
 .lunbo .bigBox{
 	position: relative;
 	width: 940px;
-	height: 353px;
 }
 .bigBox .box{
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 940px;
-	height: 353px;
 	display: none;
 }
+
+.lunbo .dot{
+	height: 36px;
+	text-align: center;
+}
+.dot span{
+	display: inline-block;
+	margin: 12px 2px;
+	width: 15px;
+	height: 9px;
+	border-radius: 2px;
+	transition: background-color 0.2s;
+	background-color: hsla(202,60%,100%,0.2);
+	cursor: pointer;
+}
+.dot span.focus{
+	background-color: hsla(202,60%,100%,0.4);
+}
+
+.arrowsLeft,.arrowsRight{
+	position: absolute;
+	top: 50%;
+	width: 45px;
+	height: 108px;
+	margin-top: -54px;
+	cursor: pointer;
+}
+.arrowsLeft{
+	left: -45px;
+	background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+}
+.arrowsLeft:hover{
+	background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%)
+}
+.arrowsRight{
+	right: -45px;
+	background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
+}
+.arrowsRight:hover{
+	background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);`
+}
+.arrowsLeft div,.arrowsRight div{
+	width: 23px;
+	height: 36px;
+	margin: 36px auto; 
+	background: url(images/BGarrows.png) no-repeat;
+}
+.arrowsLeft div{
+	background-position: -23px 0;
+}
+
+.section{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: -285px;
+	z-index: 1;
+	width: 250px;
+	background-color: #e1e8ee;
+	padding: 10px 15px;
+	box-shadow: 0 0 10px rgba(0,0,0,.4);
+	font-size: 12px;
+	color:#555;
+}
+.section .text{
+	max-height: 50px;
+}
+.section .first{
+	font-size: 16px;
+	color: #555;
+}
+.section .four{
+	position: relative;
+	width: 250px;
+	height: 150px;
+	margin:5px 0;
+}
+.section .four img{
+	display: block;
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 150px;
+}
+.section .gray{
+	height: 35px;
+	background-color: #777;
+	text-indent: 5px;
+	color: #ddd;
+	margin-bottom: 10px;
+}
+.zhuSe{
+	color: #66c0f4;
+	padding-right: 5px;
+}
+.biaoqian{
+	padding-top: 5px;
+}
+.biaoqian span{
+	padding: 2px 5px;
+	background-color: #aaa;
+	border-radius: 3px;
+	color: #e5e5e5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bigBox.one{
+	height: 353px;
+}
+.bigBox.one .box{
+	height: 353px;
+}
+
 .box .img{
 	position: relative;
 	float: left;
@@ -481,114 +623,102 @@ body{
 	background: url(images/linux.png) no-repeat;
 }
 
-.section{
-	display: none;
-	position: absolute;
-	top: 0;
-	right: -285px;
-	z-index: 1;
-	width: 250px;
-	background-color: #e1e8ee;
-	padding: 10px 15px;
-	box-shadow: 0 0 10px rgba(0,0,0,.4);
-	font-size: 12px;
-	color:#555;
+
+.bigBox.two{
+	height: 394px;
 }
-.section .text{
-	max-height: 50px;
+.bigBox.two .box{
+	height: 390px;
 }
-.first{
-	font-size: 16px;
-	color: #555;
+.bigBox.two .arrowsLeft,
+.bigBox.two .arrowsRight{
+	margin-top: -70px;
 }
-.four{
+.sunbox{
 	position: relative;
-	width: 250px;
-	height: 150px;
-	margin:5px 0;
+	float: left;
+	width: 306px;
+	height: 390px;
+	margin-right: 11px;
 }
-.four img{
+.sunbox:last-of-type{
+	margin-right: 0;
+}
+
+.sunbox img{
+	width: 306px;
+	height: 353px;
 	display: block;
+}
+.suntext{
 	position: absolute;
-	top: 0;
 	left:0;
-	width: 250px;
-	height: 150px;
+	bottom: 0;
+	width: 274px;
+	height: 115px;
+	padding: 0 16px 0 16px;
+	background: url(images/tebieyouhuiBG.jpg);
+	font-size: 12px;
+	color: #acdbf5;
 }
-.gray{
-	height: 35px;
-	background-color: #777;
-	text-indent: 5px;
-	color: #ddd;
-	margin-bottom: 10px;
+.suntext h2{
+	padding: 8px 0;
 }
-.zhuSe{
-	color: #66c0f4;
-	padding-right: 5px;
+.jiawei.two{
+	padding-top: 12px;
+	height: 39px;
 }
-.biaoqian{
-	padding-top: 5px;
+
+.jiawei.two .range{
+	font-size: 26px;
+	margin-left: 0;
+	float: left;
 }
-.biaoqian span{
-	padding: 2px 5px;
-	background-color: #aaa;
-	border-radius: 3px;
-	color: #e5e5e5;
+.jiawei.two .span{
+	float: left;
+	background-color: rgba(0,0,0,0.6);
+	height: 30px;
+	padding: 4px 5px; 
+}
+.jiawei.two .span span{
+	display: block;
+}
+.jiawei.two .span .original{
+	margin: 0;
+}
+
+.twobox{
+	position: relative;
+	height: 189px;
+	background: url(images/tebieyouhuiBG.jpg);
+}
+.twobox img{
+	height: 143px;
+}
+.twobox:first-child{
+	margin-bottom: 12px;
 }
 
 
-
-
-
-.lunbo .dot{
-	height: 36px;
-	text-align: center;
+.jinri{
+	font-size: 12px;
+	height: 46px;
+	background: #B2DDF5;
 }
-
-.dot span{
-	display: inline-block;
-	margin: 12px 2px;
-	width: 15px;
-	height: 9px;
-	border-radius: 2px;
-	transition: background-color 0.2s;
-	background-color: hsla(202,60%,100%,0.2);
-	cursor: pointer;
+.jishiqi{
+	float: left;
+	padding: 7px 7px 4px 7px
 }
-.dot span.focus{
-	background-color: hsla(202,60%,100%,0.4);
+.jishiqi span{
+	color: #c4e4f2;
+	background-color: #4f95bd;
+	padding: 0 4px;
+	margin-top: 4px;
 }
-
-
-.arrowsLeft,.arrowsRight{
-	position: absolute;
-	top: 50%;
-	width: 45px;
-	height: 108px;
-	margin-top: -54px;
-}
-.arrowsLeft{
-	left: -45px;
-	background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
-}
-.arrowsLeft:hover{
-	background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%)
-}
-.arrowsRight{
-	right: -45px;
-	background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
-}
-.arrowsRight:hover{
-	background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);`
-}
-.arrowsLeft div,.arrowsRight div{
-	width: 23px;
-	height: 36px;
-	margin: 36px auto; 
-	background: url(images/BGarrows.png) no-repeat;
-}
-.arrowsLeft div{
-	background-position: -23px 0;
+.jinri .jiawei.two{
+	float: right;
+	margin-right: 4px;
+	padding: 4px 0;
 }
 
 
