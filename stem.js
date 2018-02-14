@@ -62,6 +62,24 @@ function right(age1,age2,ranking){
 		age2.eq(z).fadeIn(500) //盒子
 		age1.eq(z).addClass("focus")  //span
 	}
+	if(ranking=="third"){
+		hidden(age1,age2)  //调用全部隐藏函数
+		j++
+		if(j == age2.length){
+			j = 0
+		}
+		age2.eq(j).fadeIn(500) //盒子
+		age1.eq(j).addClass("focus")  //span
+	}
+	if(ranking=="fourth"){
+		hidden(age1,age2)  //调用全部隐藏函数
+		k++
+		if(k == age2.length){
+			k = 0
+		}
+		age2.eq(k).fadeIn(500) //盒子
+		age1.eq(k).addClass("focus")  //span
+	}
 }
 //向左点击的代码段
 function left(age1,age2,ranking){
@@ -82,6 +100,24 @@ function left(age1,age2,ranking){
 		}
 		age2.eq(z).fadeIn(500)
 		age1.eq(z).addClass("focus")
+	}
+	if(ranking=="third"){
+		hidden(age1,age2)  //调用全部隐藏函数
+		j--
+		if(j==-1){
+			j = age2.length-1
+		}
+		age2.eq(j).fadeIn(500)
+		age1.eq(j).addClass("focus")
+	}
+	if(ranking=="fourth"){
+		hidden(age1,age2)  //调用全部隐藏函数
+		k--
+		if(k==-1){
+			k = age2.length-1
+		}
+		age2.eq(k).fadeIn(500)
+		age1.eq(k).addClass("focus")
 	}
 }
 
@@ -164,7 +200,6 @@ dotCilck($firstDotList,$firstBoxList)// 小方块span点击事件
 revealPopover($firstBoxList,".section",".four img")//鼠标移上出现弹框,加上计时器
 concealPopover($firstBoxList,".section")//鼠标离开隐藏弹框，停止计时器
 
-
 // 鼠标移上主要核心
 $firstBoxList.mouseenter(function(){
 	var $pickureImgList = $(this).find(".picture a")	//找到右侧的小图片
@@ -230,13 +265,13 @@ $(".lunbo.first").mouseleave(function(){
 
 
 
-// *************第二个*************
+// ***************************第二个****************************
 var $secondBoxList = $(".lunbo.second .box")  //当前轮播图的box盒子
 var $secondDot = $(".lunbo.second .dot")  //放span小方块的父级元素
 var $secondArrowsLeft = $(".lunbo.second .arrowsLeft")	//找到向左箭头
 var $secondArrowsRight = $(".lunbo.second .arrowsRight")	//找到向右箭头
-var z = 0  //记录第一个轮播图的图片位置
-//调用函数初始化第一个轮播图的小方块
+var z = 0  //记录第二个轮播图的图片位置
+//调用函数初始化第二个轮播图的小方块
 blockage($secondDot,$secondBoxList)
 
 var $secondDotList = $secondDot.find("span")	//找到span集合
@@ -274,3 +309,193 @@ var $tankuang = $secondBoxList.find(".tankuang")
 
 revealPopover($tankuang,".section",".four img")//鼠标移上出现弹框,加上计时器
 concealPopover($tankuang,".section")//鼠标离开隐藏弹框，停止计时器
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ***************************第三个****************************
+var $thirdBoxList = $(".lunbo.third .box")  //当前轮播图的box盒子
+var $thirdDot = $(".lunbo.third .dot")  //放span小方块的父级元素
+var $thirdArrowsLeft = $(".lunbo.third .arrowsLeft")	//找到向左箭头
+var $thirdArrowsRight = $(".lunbo.third .arrowsRight")	//找到向右箭头
+var j = 0 //记录第三个轮播图的图片位置
+//调用函数初始化第三个轮播图的小方块
+blockage($thirdDot,$thirdBoxList)
+
+var $thirdDotList = $thirdDot.find("span")	//找到span集合
+$thirdBoxList.eq(0).show()	//默认显示box	
+$thirdDotList.eq(0).addClass("focus")	//默认给span添加类名
+//向右点击
+$thirdArrowsRight.click(function(){
+	right($thirdDotList,$thirdBoxList,"third")//调用向右点击代码
+})
+//向左点击
+$thirdArrowsLeft.click(function(){
+	left($thirdDotList,$thirdBoxList,"third")//调用左右点击代码
+})
+// 调用函数
+dotCilck($thirdDotList,$thirdBoxList)// 小方块span点击事件
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ***************************第四个****************************
+var $fourthBoxList = $(".lunbo.fourth .box")  //当前轮播图的box盒子
+var $fourthDot = $(".lunbo.fourth .dot")  //放span小方块的父级元素
+var $fourthArrowsLeft = $(".lunbo.fourth .arrowsLeft")	//找到向左箭头
+var $fourthArrowsRight = $(".lunbo.fourth .arrowsRight")	//找到向右箭头
+var k = 0 //记录第四个轮播图的图片位置
+
+//调用函数初始化第四个轮播图的小方块
+blockage($fourthDot,$fourthBoxList)
+
+var $fourthDotList = $fourthDot.find("span")	//找到span集合
+$fourthBoxList.eq(0).show()	//默认显示box	
+$fourthDotList.eq(0).addClass("focus")	//默认给span添加类名
+//向右点击
+$fourthArrowsRight.click(function(){
+	right($fourthDotList,$fourthBoxList,"fourth")//调用向右点击代码
+})
+//向左点击
+$fourthArrowsLeft.click(function(){
+	left($fourthDotList,$fourthBoxList,"fourth")//调用左右点击代码
+})
+// 调用函数
+dotCilck($fourthDotList,$fourthBoxList)// 小方块span点击事件
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//选项卡   新品与热门商品
+
+var $obtain = $(".tabs .option span")
+var $zhuTiFour = $(".tabs .zhuTiFour")
+
+
+//设置非法属性的属性值
+for(var a=0;a<$obtain.length;a++){
+	$obtain.eq(a).attr("index",a)
+	$zhuTiFour.eq(a).hide()
+}
+//默认显示大盒子
+$obtain.eq(0).addClass("obtain")
+$zhuTiFour.eq(0).show()
+$zhuTiFour.eq(0).addClass("xianShi")
+
+// 默认隐藏全部的somalList背景色 和 所有youList
+$zhuTiFour.find(".somalList").css({background:"none"})
+$zhuTiFour.find(".youList").hide()
+
+//显示的
+function tacitlyApprove(moRen){
+	moRen.css({background:""})	//显示当前指向的背景颜色
+	moRen.find(".liebiao").css({background:"none"}) //隐藏当前的liebiao列表背景颜色
+	moRen.find(".liebiao .title").css({color:"#384959"}) //更改当前的title的字体颜色
+	moRen.find(".liebiao .xijie .current").css({color:"#384959"})
+	moRen.find(".liebiao .tabtext .win").css({background:"url(images/winhei.png)"})
+	moRen.find(".liebiao .tabtext .mac").css({background:"url(images/machei.png)"})
+	moRen.find(".liebiao .tabtext .linux").css({background:"url(images/linuxhei.png)"})
+}
+// 调用，默认选中第一个somalList
+tacitlyApprove($(".zhuTiFour.xianShi").find(".somalList").eq(0))
+//默认显示右侧youList第一个
+$(".zhuTiFour.xianShi").find(".youCe .youList").eq(0).show()
+
+// 点击切换选项
+$obtain.click(function(){
+	//全部隐藏
+	$obtain.removeClass("obtain")
+	$zhuTiFour.hide()
+	$zhuTiFour.removeClass("xianShi")
+	//当前显示
+	$(this).addClass("obtain")
+	var sum = Number($(this).attr("index"))
+	$zhuTiFour.eq(sum).show()
+	$zhuTiFour.eq(sum).addClass("xianShi")
+
+
+
+
+})
+
+$somalList = $(".zhuTiFour.xianShi").find(".somalList") //获取当前的somalList集合
+$youList = $(".zhuTiFour.xianShi").find(".youList")//获取当前的youList集合
+// 给$somalList集合设置非法、属性值
+for(var a=0;a<$somalList.length;a++){
+	$somalList.eq(a).attr("index",a)
+}
+//经过某一个$somalList，要做的事情！！！
+$somalList.mouseenter(function(){
+	$somalList.css({background:"none"}) //隐藏所有的背景颜色
+	$somalList.find(".liebiao").css({background:""}) //显示所有的liebiao列表背景颜色
+	$somalList.find(".liebiao .title").css({color:""}) //回复所有的title的字体颜色
+	$somalList.find(".liebiao .xijie .current").css({color:""})
+	$somalList.find(".liebiao .tabtext .win").css({background:""})
+	$somalList.find(".liebiao .tabtext .mac").css({background:""})
+	$somalList.find(".liebiao .tabtext .linux").css({background:""})
+	$youList.css({display:"none"})
+	tacitlyApprove($(this))
+	var sex = Number($(this).attr("index"))
+	$youList.eq(sex).fadeIn(200)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
