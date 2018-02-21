@@ -462,7 +462,7 @@ $obtain.click(function(){
 
 
 
-
+	
 })
 
 $somalList = $(".zhuTiFour.xianShi").find(".somalList") //获取当前的somalList集合
