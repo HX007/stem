@@ -1261,28 +1261,48 @@ li{
 
 
 
-/***************************************游戏登录页********************************************/
 
-.topRight{
-	text-align: right;
-}
-.gouwuche{
-	display: inline-block;
-	height: 20px;
-	padding: 0 25px;
-	margin:10px 0 5px 0;
-	box-shadow: 0 0 3px #000;
-	line-height: 20px;
-	text-align: center;
-	font-size: 11px;
-	color: #a4d007;
-	background: url(images/background_cart.jpg) -34px 0px;
-}
 
-.gouwuche:hover{
-	background-position: -40px 20px;
-	color: #000;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1978,6 +1998,258 @@ li{
 .kuai .slider{
 	margin-top: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************游戏登录页********************************************/
+.footer.rst{
+	margin-top: 30px;
+}
+.dengluye{
+	overflow: hidden;
+	font-size: 12px;
+	min-height: 378px;
+}
+.eighteen{
+	font-weight: 300;
+	font-size: 18px;
+	
+}
+.denglu{
+	min-height: 346px;
+	width: 584px;
+	padding: 16px;
+	float: left;
+	background-color: rgba(0,0,0,.2);
+}
+.dengluTop,.dengluBottom{
+	overflow: hidden;
+}
+.dengluLeft,.dengluRight{
+	float: left;
+	width: 274px;
+}
+.dengluTop .dengluLeft{
+	border-right: solid 1px #555;
+}
+.dengluLeft{
+	padding: 0 16px 14px 0;
+}
+.dengluRight{
+	padding:0 0 14px 16px;
+}
+.zhanghu{
+	margin-bottom: 15px;
+}
+.inputBox{
+	margin-bottom: 15px;
+}
+.inputBox input{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px #45556c;
+	padding: 5px;
+	margin: 4px 0;
+	width: 95%;
+	height: 18px;
+	font-size: 16px;
+    line-height: 21px;
+}
+.dengluBottom{
+	margin-top: 10px;
+}
+.dianji{
+	padding: 6px 15px;
+	font-size: 15px;
+	line-height: 30px;
+	border-radius: 2px;
+}
+.gengduo{
+	height: 50px;
+	line-height: 50px;
+	background: url(images/shade.png);
+}
+.gengduo a{
+	font-size: 12px;
+	color: #fff;
+}
+.gengduo a:hover{
+	color: #66c0f4;
+}
+.gengduo p{
+	display: inline-block;
+}
+.gengduoLeft{
+	width: 616px;
+	padding-right: 16px;
+}
+.why{
+	width: 290px;
+	min-height: 346px;
+	float: right;
+	padding: 16px 2px 4px 16px;
+	background-color: rgba(0,0,0,.2);
+
+}
+.why ul{
+	margin: 5px 0 10px;
+}
+.why li{
+	list-style: square;
+	list-style-position:inside;
+	line-height: 22px;
+}
+.why img{
+	margin-bottom: 10px;
+}
+
+.footnav{
+	margin-bottom: 25px;
+}
+.navTwo{
+	position: relative;
+	padding: 3px 15px;
+	font-size: 12px;
+	line-height: 20px;
+	border-radius: 2px;
+	display: inline-block;
+	cursor:pointer;
+	margin-right: 5px;
+}
+.footErji{
+	display: none;
+	position: absolute;
+	z-index: 1;
+	top: 22px;
+	left: 0px;
+	min-width: 115%;
+	/*opacity: 1;*/
+	background-color: #c7d5e0;
+	border-right: solid 1px #a7bed1;
+	box-shadow:  1px 0 1px #c6d4df;
+	padding: 8px 5px 8px 5px;
+	text-align: left;
+}
+.footErji.two{
+	min-width: 130%;
+}
+.footErji.five{
+	min-width: 140%;
+}
+.footErji a{
+	line-height: 28px;
+	padding: 0 15px;
+	display: block;
+	color: #000;
+}
+.footErji a i{
+	position: relative;
+	top: 2px;
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	margin-right: 5px;
+	background: url(images/ico_rss2.gif) no-repeat;
+}
+.footErji a:hover{
+	background-color: #000;
+	color: #eee;
+}
+.navTwo:hover .footErji{
+	display: block;
+
+}
+ 
+
+
 
 
 

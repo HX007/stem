@@ -443,10 +443,16 @@ function tacitlyApprove(moRen){
 	moRen.find(".liebiao .tabtext .mac").css({background:"url(images/machei.png)"})
 	moRen.find(".liebiao .tabtext .linux").css({background:"url(images/linuxhei.png)"})
 }
-// 调用，默认选中第一个somalList
-tacitlyApprove($(".zhuTiFour.xianShi").find(".somalList").eq(0))
-//默认显示右侧youList第一个
-$(".zhuTiFour.xianShi").find(".youCe .youList").eq(0).show()
+
+function morenlimian(){
+	// 调用，默认选中第一个somalList
+	tacitlyApprove($(".zhuTiFour.xianShi").find(".somalList").eq(0))
+
+	//默认显示右侧youList第一个
+	$(".zhuTiFour.xianShi").find(".youCe .youList").eq(0).show()
+}
+morenlimian()
+
 
 // 点击切换选项
 $obtain.click(function(){
@@ -456,36 +462,43 @@ $obtain.click(function(){
 	$zhuTiFour.removeClass("xianShi")
 	//当前显示
 	$(this).addClass("obtain")
+
 	var sum = Number($(this).attr("index"))
 	$zhuTiFour.eq(sum).show()
 	$zhuTiFour.eq(sum).addClass("xianShi")
-
-
-
-	
+	huashang()
+	// morenlimian()
 })
+function huashang(){
+	$somalList = $(".zhuTiFour.xianShi").find(".somalList") //获取当前的somalList集合
+	$youList = $(".zhuTiFour.xianShi").find(".youList")//获取当前的youList集合
 
-$somalList = $(".zhuTiFour.xianShi").find(".somalList") //获取当前的somalList集合
-$youList = $(".zhuTiFour.xianShi").find(".youList")//获取当前的youList集合
-// 给$somalList集合设置非法、属性值
-for(var a=0;a<$somalList.length;a++){
-	$somalList.eq(a).attr("index",a)
+	// 给$somalList集合设置非法、属性值
+	for(var a=0;a<$somalList.length;a++){
+		$somalList.eq(a).attr("index",a)
+	}
+	//经过某一个$somalList，要做的事情！！！
+	$somalList.mouseenter(function(){
+		$somalList.css({background:"none"}) //隐藏所有的背景颜色
+		$somalList.find(".liebiao").css({background:""}) //显示所有的liebiao列表背景颜色
+		$somalList.find(".liebiao .title").css({color:""}) //回复所有的title的字体颜色
+		$somalList.find(".liebiao .xijie .current").css({color:""})
+		$somalList.find(".liebiao .tabtext .win").css({background:""})
+		$somalList.find(".liebiao .tabtext .mac").css({background:""})
+		$somalList.find(".liebiao .tabtext .linux").css({background:""})
+		tacitlyApprove($(this))
+		var sex = Number($(this).attr("index"))
+		//动画队列问题，JQuery内部提供了停止动画队列的方法 “ stop() ”
+		//问题描述：不停地快速划过$somalList并且停止时，之前的动画尚未执行完成，隐藏无效，会多出现几个你不想让他出现的怪东西
+		for(var i = 0; i < $youList.length;i++){
+			$youList.eq(i).stop();
+		}
+
+		$youList.css({display:"none"})
+		$youList.eq(sex).fadeIn(200)
+	})
 }
-//经过某一个$somalList，要做的事情！！！
-$somalList.mouseenter(function(){
-	$somalList.css({background:"none"}) //隐藏所有的背景颜色
-	$somalList.find(".liebiao").css({background:""}) //显示所有的liebiao列表背景颜色
-	$somalList.find(".liebiao .title").css({color:""}) //回复所有的title的字体颜色
-	$somalList.find(".liebiao .xijie .current").css({color:""})
-	$somalList.find(".liebiao .tabtext .win").css({background:""})
-	$somalList.find(".liebiao .tabtext .mac").css({background:""})
-	$somalList.find(".liebiao .tabtext .linux").css({background:""})
-	$youList.css({display:"none"})
-	tacitlyApprove($(this))
-	var sex = Number($(this).attr("index"))
-	$youList.eq(sex).fadeIn(200)
-})
-
+huashang()
 
 
 
