@@ -30,8 +30,8 @@ function seekElement(point){
 	$dotList = $lunbo.find(".dot span")//找到当前的$squareList集合
 }
 
-$(".arrowsRight").click(function(){
-	seekElement(this)
+// 向右点击的代码段
+function rightCode(){
 	for(var a=0;a<$boxList.length;a++){
 		if($boxList[a].style.display == "block"){
 			$boxList.eq(a).hide()
@@ -45,6 +45,12 @@ $(".arrowsRight").click(function(){
 			return;
 		}
 	}
+}
+
+
+$(".arrowsRight").click(function(){
+	seekElement(this)
+	rightCode()
 })
 
 $(".arrowsLeft").click(function(){
@@ -73,6 +79,37 @@ $(".lunbo").find(".dot span").click(function(){
 	$boxList.eq(n).fadeIn()
 	$dotList.eq(n).addClass("focus")
 })
+
+// 第一个大盒子自动播放
+function autoPlay(){
+	play = setInterval(function(){
+		$boxList = $(".lunbo").eq(0).find(".bigBox .box")//找到第一个轮播图的$boxList集合
+		$dotList = $(".lunbo").eq(0).find(".dot span")//找到第一个轮播图的$squareList集合
+		rightCode()
+	},3000)
+}
+autoPlay()
+$(".lunbo").eq(0).mouseenter(function(){
+	clearInterval(play)
+})
+$(".lunbo").eq(0).mouseleave(function(){
+	autoPlay()	
+})
+
+// 鼠标移上主要核心
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

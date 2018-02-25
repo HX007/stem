@@ -1,13 +1,8 @@
 *{margin:0 ;padding: 0;}
 body{
-	min-width: 1450px;
 	background: url(images/beijing.png) center top no-repeat #1b2838;
 	font-family: "微软雅黑",Arial;
 	color: #c6d4df;
-}
-.centerOne{
-	width: 1408px;
-	margin: 0 auto;
 }
 .centerTwo{
 	width: 940px;
@@ -182,10 +177,12 @@ li{
 .content{
 	padding-top: 30px;
 }
+
 /*********************侧边栏**************************/
 .active{
 	float: left;
 	width: 210px;
+	margin-left: -234px;
 }
 .active img{
 	display: block;
