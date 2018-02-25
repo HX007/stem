@@ -37,7 +37,6 @@ function hidden(age1,age2){
 	age2.hide()
 	age1.removeClass("focus")
 }
-
 //该函数期望传入两个参数：(jQuery对象)
 // age1: 需要点击的span对象集合
 // age2: 需要显示的盒子对象集合
@@ -141,10 +140,9 @@ function  revealPopover(age3,age4,age5){
 			}
 			$fourList.eq(y).fadeIn(200)
 		},2000)
-		$(this).find(age4).css({
-		})
 	})
 }
+
 //鼠标离开隐藏弹框  代码段
 // age3: 鼠标要经过的对象集合
 // age4: 要显示的区块名(String)
@@ -152,10 +150,7 @@ function  concealPopover(age3,age4){
 	age3.mouseleave(function(){
 		$(this).find(age4).fadeOut(300)
 		$(this).mouseleave(function(){
-			$(this).find(age4).hide()
-			$(this).find(age4).css({
-				// opcity:0,
-			})
+			$(this).find(age4).fadeOut()
 		})
 		clearInterval(somalImg)
 	})
@@ -242,29 +237,6 @@ $(".lunbo.first").mouseleave(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ***************************第二个****************************
 var $secondBoxList = $(".lunbo.second .box")  //当前轮播图的box盒子
 var $secondDot = $(".lunbo.second .dot")  //放span小方块的父级元素
@@ -289,8 +261,7 @@ $secondArrowsLeft.click(function(){
 dotCilck($secondDotList,$secondBoxList)// 小方块span点击事件
 
 
-
-function secondAuto(){
+/*function secondAuto(){
 	secondAutoplay = setInterval(function(){
 		right($secondDotList,$secondBoxList,"second")
 	},3000)
@@ -303,30 +274,12 @@ $(".lunbo.second").mouseenter(function(){
 //鼠标离开$firstBoxList，开启计时器
 $(".lunbo.second").mouseleave(function(){
 	secondAuto()
-})
+})*/
 
 var $tankuang = $secondBoxList.find(".tankuang")
 
 revealPopover($tankuang,".section",".four img")//鼠标移上出现弹框,加上计时器
 concealPopover($tankuang,".section")//鼠标离开隐藏弹框，停止计时器
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -352,22 +305,6 @@ $thirdArrowsLeft.click(function(){
 })
 // 调用函数
 dotCilck($thirdDotList,$thirdBoxList)// 小方块span点击事件
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -398,27 +335,10 @@ dotCilck($fourthDotList,$fourthBoxList)// 小方块span点击事件
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//选项卡   新品与热门商品
+//*******************选项卡   新品与热门商品************************
 
 var $obtain = $(".tabs .option span")
 var $zhuTiFour = $(".tabs .zhuTiFour")
-
-
 //设置非法属性的属性值
 for(var a=0;a<$obtain.length;a++){
 	$obtain.eq(a).attr("index",a)
@@ -479,6 +399,7 @@ function huashang(){
 	}
 	//经过某一个$somalList，要做的事情！！！
 	$somalList.mouseenter(function(){
+		
 		$somalList.css({background:"none"}) //隐藏所有的背景颜色
 		$somalList.find(".liebiao").css({background:""}) //显示所有的liebiao列表背景颜色
 		$somalList.find(".liebiao .title").css({color:""}) //回复所有的title的字体颜色
@@ -499,8 +420,6 @@ function huashang(){
 	})
 }
 huashang()
-
-
 
 
 
