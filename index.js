@@ -205,44 +205,104 @@ $(".bigimgs img").eq(0).show()
 $(".somalboximg").eq(0).find("i").addClass("baiBian")
 
 var $length = $(".somalboximg").length
-var next = []//后面的somalboximg个数
-var prev = []//前面的somalboximg个数
+var direction = "right"   //元素allsomalimgs移动的方向锁
+var next = []	//后面触发点击事件的index()值,确定父级元素allsomalimgs的移动数值
+var prev = []	//前面触发点击事件的index()值,确定父级元素allsomalimgs的移动数值
 for(var a=0;a<$length;a++){
-	if((a-4)%5==0){
-		next.push(a)
+	if(a>2 && a%2==0){
+		next.push(a)	//往数组里面插入向右触发点击的index()值
+	}
+	if(a<$length-4 && a%2!=0){
+		prev.push(a)	//往数组里面插入向左触发点击的index()值
 	}
 }
-
-// console.log(prev)
-
 //点击图片逻辑
-$(".somalboximg").click(function(){
+$(".somalboximg img").click(function(){
 	//隐藏全部
 	$(".bigimgs img").hide()
 	$(".somalboximg i").removeClass("baiBian")
 	//显示某一个
-	var s = $(this).index()
+	var s = $(this).closest(".somalboximg").index()//当前在第几张
 	$(".bigimgs img").eq(s).fadeIn()
-	$(this).find("i").addClass("baiBian")
+	$(this).closest(".somalboximg").find("i").addClass("baiBian")
 
-	var rear = $(this).nextAll(".somalboximg").length//后面的所有同级元素的个数	
-	var front = $(this).prevAll(".somalboximg").length//前面的所有同级元素的个数	
-	var $marginLeft = parseInt($(".allsomalimgs")[0].style.marginLeft)//
-
-	console.log($marginLeft)
+	var rear = $(this).closest(".somalboximg").nextAll(".somalboximg").length//当前后面的所有同级元素的个数	
+	var front = $(this).closest(".somalboximg").prevAll(".somalboximg").length//当前前面的所有同级元素的个数	
+	var $marginLeft = parseInt($(".allsomalimgs")[0].style.marginLeft)
+	// 元素somalboximg移动的逻辑
 	for(var b=0;b<next.length;b++){
-		if(s==next[b] && rear==1){
-			$(".allsomalimgs").animate({
-				marginLeft: $marginLeft + (-120)
-			},300)
+		if(direction=="right"){
+			if(s==next[b] && rear>1){
+				$(".allsomalimgs").animate({
+					marginLeft: $marginLeft + (-120*2)
+				},300)
+			}
+			if(s==next[b] && rear==1){
+				$(".allsomalimgs").animate({
+					marginLeft: $marginLeft + (-120)
+				},300)
+				direction = "left"
+			}
 		}
-		if(s==next[b] && rear>1){
-			$(".allsomalimgs").animate({
-				marginLeft: $marginLeft + (-120*2)
-			},300)
+		if(direction=="left"){
+			if(s==prev[b] && front==1){
+				$(".allsomalimgs").animate({
+					marginLeft: 0
+				},300)
+				direction = "right"
+			}
+			if(s==prev[b] && front>1){
+				$(".allsomalimgs").animate({
+					marginLeft: $marginLeft + 120*2
+				},300)
+			}
 		}
 	}
 })
 
+			
+$(".sliderRight").click(function(){
+	var xiabiao = $(".somalboximg i.baiBian").closest(".somalboximg").index()
+	$(".somalboximg i").removeClass("baiBian")
+	
+	if(xiabiao==$length){
+		$(".somalboximg").eq(0).find("i").addClass("baiBian")
+	}
+	$(".somalboximg").eq(xiabiao+1).find("i").addClass("baiBian")
 
+	var rear = $(this).closest(".somalboximg").nextAll(".somalboximg").length//当前后面的所有同级元素的个数	
+	var $marginLeft = parseInt($(".allsomalimgs")[0].style.marginLeft)
+	for(var b=0;b<next.length;b++){
+		if(xiabiao+1==next[b] && rear>1){
+			$(".allsomalimgs").animate({
+				marginLeft: $marginLeft + (-120*2)
+			},300)
+		}
+		if(xiabiao+1==next[b] && rear==1){
+			$(".allsomalimgs").animate({
+				marginLeft: $marginLeft + (-120)
+			},300)
+		}
+	}
+	
+	
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $(".sliderLeft").
 
