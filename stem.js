@@ -157,19 +157,6 @@ function  concealPopover(age3,age4){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // *************第一个*************
 var $firstBoxList = $(".lunbo.first .box")  //当前轮播图的box盒子
 var $firstDot = $(".lunbo.first .dot")  //放span小方块的父级元素
@@ -261,7 +248,7 @@ $secondArrowsLeft.click(function(){
 dotCilck($secondDotList,$secondBoxList)// 小方块span点击事件
 
 
-/*function secondAuto(){
+function secondAuto(){
 	secondAutoplay = setInterval(function(){
 		right($secondDotList,$secondBoxList,"second")
 	},3000)
@@ -274,7 +261,7 @@ $(".lunbo.second").mouseenter(function(){
 //鼠标离开$firstBoxList，开启计时器
 $(".lunbo.second").mouseleave(function(){
 	secondAuto()
-})*/
+})
 
 var $tankuang = $secondBoxList.find(".tankuang")
 
@@ -332,6 +319,15 @@ $fourthArrowsLeft.click(function(){
 })
 // 调用函数
 dotCilck($fourthDotList,$fourthBoxList)// 小方块span点击事件
+
+
+
+
+
+
+
+
+
 
 
 

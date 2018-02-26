@@ -71,7 +71,7 @@ li{
 .top{
 	height: 104px;
 }
-.top>img{
+.top>a>img{
 	float: left;
 	display: block;
 	width: 176px;
@@ -515,6 +515,7 @@ li{
 }
 .bigBox.one .box{
 	height: 353px;
+	box-shadow: 0 0 5px #000;
 }
 
 .box .img{
@@ -522,7 +523,6 @@ li{
 	float: left;
 	width: 616px;
 	height: 353px;
-	box-shadow: 2px 0 5px #000;
 }
 .final .img{
 	background: url(images/final.jpg) no-repeat;
@@ -571,7 +571,7 @@ li{
     font-size: 24px;
     color: #fff;
     line-height: 26px;
-    padding: 10px 6px 0 6px;
+    padding: 10px 10px 0 10px;
 }
 
 .picture{
@@ -582,16 +582,13 @@ li{
 	display: block;
 	float: left;
 }
-.picture a:nth-child(0dd){
-	padding-left: 10px;
-}
 .picture img{
 	display: block;
 	float: left;
 	opacity: .5;
 	width: 147px;
 	height: 69px;
-	padding: 10px 10px 0 0;
+	padding: 10px 0 0 10px;
 }
 .picture img:hover{
 	opacity: 1;
@@ -718,7 +715,11 @@ li{
 }
 .jishiqi{
 	float: left;
-	padding: 7px 7px 4px 7px
+	padding: 4px 7px 4px 7px
+}
+.jishiqi  p{
+	color: #333;
+	padding-bottom: 5px;
 }
 .jishiqi span{
 	color: #c4e4f2;
@@ -925,7 +926,7 @@ li{
 	width: 100%;
 	font-size: 12px;
 	margin-bottom:5px; 
-	background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
+	background-image: none;
 }
 
 .somalList .liebiao{
@@ -1002,6 +1003,37 @@ li{
 .xinpin a:hover{
 	border: 1px solid rgba(255,255,255,1);
 }
+
+
+.somalList.hove{
+	background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
+}
+.somalList.hove .liebiao{
+	background-color:transparent; 
+}
+.somalList.hove .title{
+	color: #384959;
+}
+.somalList.hove .current{
+	color: #384959;
+}
+.somalList.hove .win{
+	background: url(images/winhei.png);
+}
+.somalList.hove .mac{
+	background: url(images/machei.png);
+}
+.somalList.hove .linux{
+	background: url(images/linuxhei.png);
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -1995,6 +2027,37 @@ li{
 .kuai .slider{
 	margin-top: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
