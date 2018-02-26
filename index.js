@@ -204,12 +204,18 @@ $(".bigimgs img").hide()
 $(".bigimgs img").eq(0).show()
 $(".somalboximg").eq(0).find("i").addClass("baiBian")
 
-
-
 var $length = $(".somalboximg").length
-$(".allsomalimgs").css({width: 120*$length})
+var next = []//后面的somalboximg个数
+var prev = []//前面的somalboximg个数
+for(var a=0;a<$length;a++){
+	if((a-4)%5==0){
+		next.push(a)
+	}
+}
 
+// console.log(prev)
 
+//点击图片逻辑
 $(".somalboximg").click(function(){
 	//隐藏全部
 	$(".bigimgs img").hide()
@@ -219,29 +225,23 @@ $(".somalboximg").click(function(){
 	$(".bigimgs img").eq(s).fadeIn()
 	$(this).find("i").addClass("baiBian")
 
+	var rear = $(this).nextAll(".somalboximg").length//后面的所有同级元素的个数	
+	var front = $(this).prevAll(".somalboximg").length//前面的所有同级元素的个数	
+	var $marginLeft = parseInt($(".allsomalimgs")[0].style.marginLeft)//
 
-	//点击图片逻辑
-	console.log($(".allsomalimgs")[0].style.marginLeft)
-	console.log($(this).nextAll(".somalboximg").length)
-	var rear = $(this).nextAll(".somalboximg").length
-
-	// var front
-
-	if(s==4 && rear==1){
-		$(".allsomalimgs").animate(
-			{ marginLeft: -(1*120) },300)
+	console.log($marginLeft)
+	for(var b=0;b<next.length;b++){
+		if(s==next[b] && rear==1){
+			$(".allsomalimgs").animate({
+				marginLeft: $marginLeft + (-120)
+			},300)
+		}
+		if(s==next[b] && rear>1){
+			$(".allsomalimgs").animate({
+				marginLeft: $marginLeft + (-120*2)
+			},300)
+		}
 	}
-	if(s==4 && rear>1){
-		$(".allsomalimgs").animate(
-			{ marginLeft: -(2*120) },300)
-	}
-
-	// if(s==1 && $length%5==1){
-	// 	$(".allsomalimgs").animate(
-	// 		{ marginLeft: (1*120) },500)
-	// }
-
-
 })
 
 
