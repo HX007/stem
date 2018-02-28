@@ -197,112 +197,172 @@ $(".somalList").mouseenter(function(){
 
 
 
-//*****************详情页**********************
+//************************详情页***************************
 
 //初始化.bigimgs img
 $(".bigimgs img").hide()
 $(".bigimgs img").eq(0).show()
 $(".somalboximg").eq(0).find("i").addClass("baiBian")
 
-var $length = $(".somalboximg").length
-var direction = "right"   //元素allsomalimgs移动的方向锁
-var next = []	//后面触发点击事件的index()值,确定父级元素allsomalimgs的移动数值
-var prev = []	//前面触发点击事件的index()值,确定父级元素allsomalimgs的移动数值
-for(var a=0;a<$length;a++){
-	if(a>2 && a%2==0){
-		next.push(a)	//往数组里面插入向右触发点击的index()值
+var allsomalimgsWidth = parseInt($(".allsomalimgs").width())
+var sliderWidth =  parseInt($(".huakuai").closest(".sliderAction").width())
+var huakuaiWidth = parseInt($(".huakuai").width())
+
+var adv = {}
+adv.count = $(".somalboximg").length
+adv.m = 0;//记录当前显示的张数
+adv.n = 0;//记录可视视图里面的最左边的张数的下标
+
+function xianshi(obj){
+	$(".bigimgs img").hide()
+	$(obj).closest(".leftcol").find(".somalimgs i").removeClass("baiBian")
+	$(obj).closest(".leftcol").find(".somalimgs i").eq(adv.m).addClass("baiBian")
+	$(obj).closest(".leftcol").find(".bigimgs img").eq(adv.m).fadeIn()
+}
+$(".sliderRight").click(function(){
+	++adv.m
+	var _this = this
+	if(adv.m == adv.count){
+		adv.m = 0
+		moveView()
 	}
-	if(a<$length-4 && a%2!=0){
-		prev.push(a)	//往数组里面插入向左触发点击的index()值
+	if(adv.m == adv.n+5){
+		moveView()
+	}
+	
+	xianshi(_this)
+})
+
+$(".sliderLeft").click(function(){
+	var _this = this
+	--adv.m
+	if(adv.m == -1){
+		adv.m = adv.count-1
+		moveView()
+	}
+
+	if(adv.m < adv.count-5){
+		xianshi(_this)
+		moveView()
+	}
+
+	// (adv.count - adv.count%5)%5==0
+
+	// if(adv.m>0 && adv.m ==adv.count-adv.m){
+	// 	moveView()
+	// }
+	
+
+
+	xianshi(_this)
+})
+
+
+
+function moveView(newIndex){
+	adv.n = newIndex || adv.m;
+	var r = adv.count - adv.m;
+	if(r > 5){
+		$(".allsomalimgs").animate({
+			"marginLeft":-(adv.m) * 120
+		});
+
+		percent = (adv.m * 120 /(allsomalimgsWidth-600))
+		$(".huakuai").animate({
+			left : Math.round((sliderWidth-huakuaiWidth)*percent) + "px"
+		})
+	}
+	else{
+		if(adv.n !== adv.count - 5){
+			$(".allsomalimgs").animate({
+				"marginLeft":-(adv.count - 5) * 120 
+			});
+
+			percent = ((adv.count - 5) * 120 / (allsomalimgsWidth-600))
+
+			$(".huakuai").animate({
+				left : Math.round((sliderWidth-huakuaiWidth)*percent) + "px"
+			})
+		}
 	}
 }
-//点击图片逻辑
-$(".somalboximg img").click(function(){
-	//隐藏全部
-	$(".bigimgs img").hide()
-	$(".somalboximg i").removeClass("baiBian")
-	//显示某一个
-	var s = $(this).closest(".somalboximg").index()//当前在第几张
-	$(".bigimgs img").eq(s).fadeIn()
-	$(this).closest(".somalboximg").find("i").addClass("baiBian")
 
-	var rear = $(this).closest(".somalboximg").nextAll(".somalboximg").length//当前后面的所有同级元素的个数	
-	var front = $(this).closest(".somalboximg").prevAll(".somalboximg").length//当前前面的所有同级元素的个数	
-	var $marginLeft = parseInt($(".allsomalimgs")[0].style.marginLeft)
-	// 元素somalboximg移动的逻辑
-	for(var b=0;b<next.length;b++){
-		if(direction=="right"){
-			if(s==next[b] && rear>1){
-				$(".allsomalimgs").animate({
-					marginLeft: $marginLeft + (-120*2)
-				},300)
-			}
-			if(s==next[b] && rear==1){
-				$(".allsomalimgs").animate({
-					marginLeft: $marginLeft + (-120)
-				},300)
-				direction = "left"
-			}
+
+
+
+
+
+
+
+
+
+
+
+//滑块逻辑段
+$(".huakuai")[0].onmousedown = function(event){
+	var downX = event.clientX
+	distanceLeft = downX - parseInt(this.style.left)//left间距
+	$("body")[0].onselectstart = function(){return false}
+	this.onmousemove = function(event){
+		movex = event.clientX
+		this.style.left = movex - distanceLeft + "px"
+		//边缘检测				
+		if(parseInt(this.style.left)<0){
+			this.style.left = 0 + "px"
 		}
-		if(direction=="left"){
-			if(s==prev[b] && front==1){
-				$(".allsomalimgs").animate({
-					marginLeft: 0
-				},300)
-				direction = "right"
-			}
-			if(s==prev[b] && front>1){
-				$(".allsomalimgs").animate({
-					marginLeft: $marginLeft + 120*2
-				},300)
-			}
+		if(parseInt(this.style.left)>sliderWidth - huakuaiWidth){
+			this.style.left = sliderWidth - huakuaiWidth + "px"
 		}
+		//百分比
+		percent = parseInt(this.style.left)/(sliderWidth-huakuaiWidth)
+		// left值
+		$(".allsomalimgs")[0].style.left = - Math.round((allsomalimgsWidth-600) * percent) + "px"
 	}
+
+	this.onmouseup = function(event){
+		movex = event.clientX
+		distanceLeft = movex - parseInt(this.style.left)//left间距
+		this.style.left = movex - distanceLeft + "px"
+		this.onmousemove = null
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(".chacha").click(function(){
+	$(this).remove()
 })
-
-			
-$(".sliderRight").click(function(){
-	var xiabiao = $(".somalboximg i.baiBian").closest(".somalboximg").index()
-	$(".somalboximg i").removeClass("baiBian")
-	
-	if(xiabiao==$length){
-		$(".somalboximg").eq(0).find("i").addClass("baiBian")
-	}
-	$(".somalboximg").eq(xiabiao+1).find("i").addClass("baiBian")
-
-	var rear = $(this).closest(".somalboximg").nextAll(".somalboximg").length//当前后面的所有同级元素的个数	
-	var $marginLeft = parseInt($(".allsomalimgs")[0].style.marginLeft)
-	for(var b=0;b<next.length;b++){
-		if(xiabiao+1==next[b] && rear>1){
-			$(".allsomalimgs").animate({
-				marginLeft: $marginLeft + (-120*2)
-			},300)
-		}
-		if(xiabiao+1==next[b] && rear==1){
-			$(".allsomalimgs").animate({
-				marginLeft: $marginLeft + (-120)
-			},300)
-		}
-	}
-	
-	
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $(".sliderLeft").
 
