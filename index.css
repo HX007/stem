@@ -337,27 +337,33 @@ li{
 	right: 2px;
 	width: 25px;
 	height: 25px;
+	cursor: pointer;
+	opacity: .6;
+}
+.nav .input img:hover{
+	opacity: 1;
 }
 .nav input{
 	width: 228px;
 	height: 27px;
 	outline: none;
-	border: none;
+	border: 1px solid rgba( 0, 0, 0, 0.3);
+	text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.1);
+	background-color: #316282;
 	border-radius: 3px;
-	background:url(images/input.png) no-repeat;
 	background-size: cover;
 	margin-top: 3px;
-	border:solid 1px #555;
 	text-indent: 15px;
-	color: #333;
+	color: #000;
+	letter-spacing:1px;
 }
 .nav input::-webkit-input-placeholder{
 	font-style: italic;
 	font-size: 14px;
-	color: #555;
+	color: #333;
 	letter-spacing: 2px;
 }
-.nav input:hover{
+.nav .input:hover input{
 	border: solid 1px #348fec;
 }
 /*********************主导航完*************************/
@@ -1513,7 +1519,7 @@ li{
 }
 .BiaoQian{
 	display: inline-block;
-	padding: 0 7px;
+	padding: 3px 7px;
 	line-height: 16px;
 	border-radius: 2px;
 	font-size: 11px;
@@ -1628,14 +1634,19 @@ li{
 	border-bottom: 1px solid #626366;
 	padding: 3px 0;
 	text-align: center;
-
+	cursor: pointer;
 }
 .languageTable tr td:first-child{
 	width: 94px;
 	text-align: left;
+	cursor: auto;
 }
-
-
+.languageTable img{
+	display: none;
+}
+.languageTable img.duihao{
+	display: inline-block;
+}
 .tableBottom{
 	line-height: 25px;
 }
@@ -1826,6 +1837,7 @@ li{
 	padding: 5px 15px;
 	font-size: 15px;
 	line-height: 30px;
+	cursor: pointer;
 }
 .jiaGou:hover{
 	background: linear-gradient( to bottom, rgba(164,208,7,1) 5%, rgba(107,135,5,1) 95%);
@@ -1975,10 +1987,14 @@ li{
 	float: left;
 	display: block;
 	width: 171px;
-	height: 132px;
-	padding: 15px;
-	margin-right: 7px;
+	padding: 13px;
+	margin: 0 3px;
 	background: rgba(0,0,0,.2);
+	border: solid 1px transparent;
+}
+.threeBox:hover{
+	border: 1px solid rgba( 103, 193, 245, 0.5 );
+
 }
 .threeBox img{
 	display: block;

@@ -240,20 +240,17 @@ $(".sliderLeft").click(function(){
 		adv.m = adv.count-1
 		moveView()
 	}
-
-	if(adv.m < adv.count-5){
-		xianshi(_this)
+	if(adv.m < adv.count-5 && adv.m>=5){
 		moveView()
 	}
-
-	// (adv.count - adv.count%5)%5==0
-
-	// if(adv.m>0 && adv.m ==adv.count-adv.m){
-	// 	moveView()
-	// }
-	
-
-
+	if(adv.m==4){
+		$(".allsomalimgs").animate({
+			"marginLeft": 0
+		});
+		$(".huakuai").animate({
+			left : 0 + "px"
+		})
+	}
 	xianshi(_this)
 })
 
@@ -362,6 +359,13 @@ $(".huakuai")[0].onmousedown = function(event){
 
 
 
+//点击选择语言区域的对号事件
+$(".languageTable td").click(function(){
+	$(this).find("img").toggleClass("duihao")	
+})
+
+
+//点击评论区域 XX 的事件
 $(".chacha").click(function(){
 	$(this).remove()
 })
