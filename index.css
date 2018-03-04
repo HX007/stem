@@ -1981,7 +1981,6 @@ li{
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 1206px;
 }
 .threeBox{
 	float: left;
@@ -2458,12 +2457,9 @@ li.no>span{
 	
 }
 
-
-
 .date{
 	margin-bottom: 8px;
 }
-
 
 .yanlun{
 	color: #9fb4c9;
@@ -2473,6 +2469,62 @@ li.no>span{
 	padding-bottom: 15px;
 	border-bottom: solid 1px rgba( 0, 0, 0, 0.5 );
 }
+
+
+.jiaZaiZhong{
+	padding-bottom: 20px;
+}
+.animation{
+	height: 150px;
+	width: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	margin: 0 auto;
+}
+
+.tiao{
+	width: 20px;
+	background-color: #3ab6fe;
+	display: inline-block;
+}
+@keyframes jiazai{
+	0%{height: 25px;}
+	50%{ height: 80px;}
+	100%{ height: 25px;}
+}
+
+
+.tiao.one{
+	animation: jiazai 1s infinite .4s;
+}
+.tiao.two{
+	animation: jiazai 1s infinite .2s;	
+}
+.tiao.three{
+	animation: jiazai 1s infinite;
+}
+
+
+.jiazaiText{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	color:#3ab6fe;
+	font-size: 20px;
+	line-height: 25px;
+}
+.jiazaiText span{
+	display: block;
+	margin: 0 5px;
+	width: 6px;
+	height: 6px;
+	margin-top: -5px;
+	background-color: #3ab6fe;
+}
+
+
+
 
 
 

@@ -254,8 +254,6 @@ $(".sliderLeft").click(function(){
 	xianshi(_this)
 })
 
-
-
 function moveView(newIndex){
 	adv.n = newIndex || adv.m;
 	var r = adv.count - adv.m;
@@ -287,40 +285,56 @@ function moveView(newIndex){
 
 
 
+//当前要显示的
+function reveal(){
+	$(".somalboximg i").removeClass("baiBian")
+	$(".bigimgs img").hide()
+	$(".bigimgs img").eq(adv.m).show()
+	$(".somalboximg").eq(adv.m).find("i").addClass("baiBian")
+}
 
-
-
-
-
-
-
-
-//滑块逻辑段
-$(".huakuai")[0].onmousedown = function(event){
-	var downX = event.clientX
-	distanceLeft = downX - parseInt(this.style.left)//left间距
-	$("body")[0].onselectstart = function(){return false}
-	this.onmousemove = function(event){
-		movex = event.clientX
-		this.style.left = movex - distanceLeft + "px"
-		//边缘检测				
-		if(parseInt(this.style.left)<0){
-			this.style.left = 0 + "px"
+$(".somalboximg").click(function(){
+	//  site 切换前,白边的位置
+	site = $(".baiBian").closest(".somalboximg").index()
+	nextImg = $(this).nextAll().length//后面剩余的张数
+	prevImg = $(this).prevAll().length//前面剩余的张数
+	adv.m = $(this).index()//当前要去的张数
+	reveal()//当前要显示的
+	//去白边的后面
+	if(adv.m>site){
+		if(adv.m%4 == 0){
+			onclckeMoveBox()
 		}
-		if(parseInt(this.style.left)>sliderWidth - huakuaiWidth){
-			this.style.left = sliderWidth - huakuaiWidth + "px"
+	}
+	//去白边的前面	
+	if(adv.m<site){
+		for(var a=0;a<adv.count;a++){
+
+			if(adv.m == ((adv.cont-1)-4*a)){
+				if(prevImg >5){
+					$(".allsomalimgs").animate({
+						"marginLeft": -adv.m*120 + "px"
+					});
+				}
+			}
+			
 		}
-		//百分比
-		percent = parseInt(this.style.left)/(sliderWidth-huakuaiWidth)
-		// left值
-		$(".allsomalimgs")[0].style.left = - Math.round((allsomalimgsWidth-600) * percent) + "px"
+	}
+})
+
+//点击图片盒子移动的逻辑
+function onclckeMoveBox(){
+	// console.log(nextImg)
+	if(nextImg > 5){
+		$(".allsomalimgs").animate({
+			"marginLeft": -adv.m*120 + "px"
+		});
 	}
 
-	this.onmouseup = function(event){
-		movex = event.clientX
-		distanceLeft = movex - parseInt(this.style.left)//left间距
-		this.style.left = movex - distanceLeft + "px"
-		this.onmousemove = null
+	if(nextImg < 5){
+		$(".allsomalimgs").animate({
+			"marginLeft": -(adv.count-5)*120 + "px"
+		});
 	}
 
 }
@@ -337,6 +351,83 @@ $(".huakuai")[0].onmousedown = function(event){
 
 
 
+//滑块逻辑段
+$(".huakuai")[0].onmousedown = function(event){
+	var downX = event.clientX
+	distanceLeft = downX - parseInt(this.style.left)//left间距
+
+	$("body")[0].onselectstart = function(){return false}
+	var _this = this
+	window.onmousemove = function(event){
+		movex = event.clientX
+		_this.style.left = movex - distanceLeft + "px"
+		//边缘检测				
+		if(parseInt(_this.style.left)<0){
+			_this.style.left = 0 + "px"
+		}
+		if(parseInt(_this.style.left)>sliderWidth - huakuaiWidth){
+			_this.style.left = sliderWidth - huakuaiWidth + "px"
+		}
+		//百分比
+		percent = parseInt(_this.style.left)/(sliderWidth-huakuaiWidth)
+		// left值
+		$(".allsomalimgs")[0].style.left = - Math.round((allsomalimgsWidth-600) * percent) + "px"
+	}
+
+	window.onmouseup = function(event){
+		movex = event.clientX
+		distanceLeft = movex - parseInt(_this.style.left)//left间距
+		_this.style.left = movex - distanceLeft + "px"
+		window.onmousemove = null
+		$(".huakuai")[0].onmouseleave = function(){
+			$("body")[0].onselectstart = function(){return}
+		}
+	}
+
+}
+
+
+
+
+
+$(".chanpinThree").css({
+	width:205 * $(".threeBox").length
+})
+
+var chanpin = 0
+
+
+
+$(".sliderRight").click(function(){
+	var ThreeWidth =  $(this).closest(".kuai").find(".chanpinThree").width()
+	var threeBoxlength = $(this).closest(".kuai").find(".threeBox").length-1
+	var chanpinLeft = parseInt($(".chanpinThree")[0].style.marginLeft)
+	console.log(chanpin++)
+
+	if(threeBoxlength-chanpin <2){
+		chanpin = 0
+	}
+	$(".chanpinThree").animate({
+		marginLeft : -chanpin*205
+		// $(".huakuai")[1].style.left = 
+		// parseInt($(".sliderAction").width()) 
+
+	})
+	console.log(parseInt($(".chanpinThree")[0].style.marginLeft)/(ThreeWidth-616))
+	// console.log(Math.round(parseInt($(".chanpinThree")[0].style.marginLeft)/ThreeWidth))
+
+
+
+
+
+})
+
+$(".sliderLeft").click(function(){
+})
+
+// $(".huakuai")[2].onmousedown = function(event){
+
+// }
 
 
 
