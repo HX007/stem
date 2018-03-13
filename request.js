@@ -56,10 +56,10 @@ function callbackfn(data){
 		//判断颜色
 		if(data[i].evaluate<4){
 			// console.log("hahaha")
-			newBox.querySelectorAll(".section .estimate")[0].style.color = "#00FFFF" 
+			newBox.querySelectorAll(".section .estimate")[0].style.color = "#67C0ED" 
 		}
 		if(data[i].evaluate==4){
-			newBox.querySelectorAll(".section .estimate")[0].style.color = "#7CFC00" 
+			newBox.querySelectorAll(".section .estimate")[0].style.color = "#A79E74" 
 		}	
 		if(data[i].evaluate>4){		
 			newBox.querySelectorAll(".section .estimate")[0].style.color = "#8C8C8C"

@@ -508,6 +508,8 @@ li{
 	color:#999;
 }
 .biaoqian{
+	height: 25px;
+	overflow: hidden;
 	padding-top: 5px;
 }
 .biaoqian span{
@@ -627,6 +629,7 @@ li{
 .jiawei a:last-child{
 	float: right;
 	padding-top: 20px;
+	padding-right: 8px;
 }
 .jiawei a span{
 	float: left;
