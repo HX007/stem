@@ -99,10 +99,6 @@ function luoji(){
 		var $pickureImgList = $(this).find(".picture a")	//找到右侧的小图片
 		$pickureImgList.mouseenter(function(){
 			var p = $(this).index()
-<<<<<<< HEAD
-=======
-			$imgImgList.closest(".img").css({background:"none"})
->>>>>>> 73fef84d2afbd50f04cc442e21eca1b229f44e0c
 			$imgImgList.hide()
 			//动画队列问题，JQuery内部提供了停止动画队列的方法 “ stop() ”
 			//问题描述：不停地快速划过$somalList并且停止时，之前的动画尚未执行完成，隐藏无效，会多出现几个你不想让他出现的怪东西
@@ -113,12 +109,8 @@ function luoji(){
 		})
 		$pickureImgList.mouseleave(function(){
 			$imgImgList.hide()
-<<<<<<< HEAD
 			console.log(fourImg[0])
 			$imgImgList.eq(0).fadeIn() //让第一个默认显示
-=======
-			$imgImgList.closest(".img").css({background:""})
->>>>>>> 73fef84d2afbd50f04cc442e21eca1b229f44e0c
 		})
 	})
 
