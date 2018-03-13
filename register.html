@@ -155,11 +155,15 @@
 							<form action="">
 								<div class="inputBox">
 									<p>Steam 帐户名称</p>
-									<input type="text">
+									<input type="text" id="username">
 								</div>
 								<div class="inputBox">
 									<p>密码</p>
-									<input type="password">
+									<input type="password" id="password">
+									<p class="xuanzhong">
+										<input type="checkbox" id="opt">
+										<label for="opt">7天免登录</label>
+									</p>
 								</div>
 							</form>
 						</div>
@@ -171,7 +175,7 @@
 					</div>
 					<div class="dengluBottom">
 						<div class="dengluLeft">
-							<a href="" class="zhuSe xiangqingAnNiu dianji">登录</a>
+							<a class="zhuSe xiangqingAnNiu dianji" id="reset">登录</a>
 						</div>
 						<div class="dengluRight">
 							<a href="" class="zhuSe xiangqingAnNiu dianji">加入 Stem</a>
@@ -280,6 +284,57 @@
 			</ul>
 		</div>
 	</div>
-	<script src="stem.js"></script>
+	<script>
+		/*	该函数期望传入两个参数：
+		参数一：data (obj / String)
+		参数二：day  (生命周期。。天数)*/
+		function setCookie(data,day){
+			var date = new Date()
+			date.setDate(date.getDate()+day)
+			for(var i in data){
+				document.cookie = i+"="+data[i]+";expires="+date;
+			}
+			// console.log(document.cookie)
+		}
+
+		//该函数获取属性的属性值，期望传入一个参数：属性名(String),返回所对应的属性值
+		function acquireCookie(receive){
+			// var receive = receive
+			var str = document.cookie
+			var sarteIndex = str.indexOf(receive)
+			var endIndex = str.indexOf(";",sarteIndex)
+			if(endIndex==-1){
+				endIndex = str.length
+			}
+			var incision = str.slice(sarteIndex,endIndex)
+			var array = incision.split("=")[1]
+			return array
+		}
+
+
+		var duixiang = {} //声明对象
+
+		$("#reset").click(function(){
+			if($("#username").val()!=""&&$("#password").val()!=""){
+				if($("#opt")[0].checked){
+					//设置属性
+					duixiang.username = $("#username").val()
+					duixiang.password = $("#password").val()
+					// console.log(duixiang)
+					setCookie(duixiang,7)
+				}
+			}
+			else{
+				alert("请输入用户名或密码！")
+			}
+		})
+
+		$("#username").val(acquireCookie("username"))
+		$("#password").val(acquireCookie("password"))
+
+		if($("#username").val()!="" && $("#password").val()!=""){
+			alert("登陆成功!")
+		}
+	</script>
 </body>
 </html>

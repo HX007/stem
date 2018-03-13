@@ -508,7 +508,9 @@ li{
 	padding-top: 5px;
 }
 .biaoqian span{
+	display: inline-block;
 	padding: 2px 5px;
+	margin: 2px;
 	background-color: #aaa;
 	border-radius: 3px;
 	color: #e5e5e5;
@@ -540,7 +542,7 @@ li{
 	width: 616px;
 	height: 353px;
 }
-.final .img{
+/*.final .img{
 	background: url(images/final.jpg) no-repeat;
 }
 .boxi .img{
@@ -560,7 +562,7 @@ li{
 }
 .sword .img{
 	background: url(images/sword.jpg) no-repeat;
-}
+}*/
 .box .img a{
 	display: block;
 	height: 353px;
@@ -2581,7 +2583,7 @@ li.no>span{
 .inputBox{
 	margin-bottom: 15px;
 }
-.inputBox input{
+.inputBox>input{
 	background-color: rgba( 0, 0, 0, 0.2 );
 	color: #fff;
 	border: 1px solid #000;
@@ -2593,6 +2595,19 @@ li.no>span{
 	height: 18px;
 	font-size: 16px;
     line-height: 21px;
+}
+.xuanzhong{
+	line-height: 25px;
+}
+label{
+	cursor: pointer;
+}
+#opt{
+	cursor: pointer;
+	border: none;
+}
+#reset{
+	cursor: pointer;
 }
 .dengluBottom{
 	margin-top: 10px;
@@ -2617,6 +2632,7 @@ li.no>span{
 }
 .gengduo p{
 	display: inline-block;
+	text-indent: 5px;
 }
 .gengduoLeft{
 	width: 616px;
