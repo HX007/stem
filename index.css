@@ -545,7 +545,31 @@ li{
 	width: 616px;
 	height: 353px;
 }
+<<<<<<< HEAD
 
+=======
+/*.final .img{
+	background: url(images/final.jpg) no-repeat;
+}
+.boxi .img{
+	background: url(images/boxi.jpg) no-repeat;
+}
+.hizi .img{
+	background: url(images/hizi.jpg) no-repeat;
+}
+.nba .img{
+	background: url(images/nba.jpg) no-repeat;
+}
+.slay .img{
+	background: url(images/slay.jpg) no-repeat;
+}
+.sub .img{
+	background: url(images/sub.jpg) no-repeat;
+}
+.sword .img{
+	background: url(images/sword.jpg) no-repeat;
+}*/
+>>>>>>> 73fef84d2afbd50f04cc442e21eca1b229f44e0c
 .box .img a{
 	display: block;
 	height: 353px;
