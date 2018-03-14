@@ -16,6 +16,7 @@ function callbackfn(data){
 		newBox.setAttribute("gameId",data[i].gameId)  //设置游戏ID
 
 		newBox.querySelectorAll(".url")[0].setAttribute("href","javascript:void(0)")
+
 		newBox.querySelectorAll(".url")[0].setAttribute("gemeName",data[i].name)  //设置游戏名字
 		newBox.querySelectorAll(".url img")[0].style.display = "block"  //让第一个默认显示
 		//插入图片路径
@@ -99,8 +100,8 @@ function callbackfn(data){
 	// 清理好 要发送请求的数据
 	var ArrayGame = []  //初始化数组 要请求的数据 ID
 	//如果页面中存在cookie(属性名为ID),将cookie 做为字符串拿出来转换成数组 并赋值给 数组ArrayGame
-	if(document.cookie){
-		ArrayGame = acquireCookie("ID").split(",")
+	if(acquireCookie("ID")){
+		ArrayGame = acquireCookie("ID").split(",")  //？？？？？？？？？
 	} 
 	//  因为cookie(属性名为ID)的缓存是基于数组Array来进行写入的,而且数组是用来查除排重的, 
 	//  但是页面刷新后数组会重置, cookie(属性名为ID)的缓存也将会被重新赋值,
@@ -125,7 +126,6 @@ function callbackfn(data){
 
 		setCookie(sendGame,1) //设置cookie
 	})
-
 }
 
 //浏览记录   发送数据请求	
@@ -135,7 +135,7 @@ document.getElementsByTagName("head")[0].appendChild(scr2)
 
 
 function receptionId(data){
-	console.log(data.length)
+	// console.log(data.length)
 	for(var i=0;i<data.length;i++){
 
 		var newA = $("<a></a>")  //创建新的a标签
