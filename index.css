@@ -217,7 +217,10 @@ li{
 	display: block;
 	color: #66c0f4;
 	padding: 3px 0;
-
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
 }
 .activeText i{
 	position: relative;
@@ -478,6 +481,10 @@ li{
 .section .first{
 	font-size: 16px;
 	color: #555;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+
 }
 .section .four{
 	position: relative;
@@ -538,6 +545,7 @@ li{
 	height: 353px;
 }
 .bigBox.one .box{
+	cursor: pointer;
 	height: 353px;
 	box-shadow: 0 0 5px #000;
 }
@@ -569,12 +577,14 @@ li{
 }
 
 .gameName{
-	max-height: 52px;
-    overflow: hidden;
+	max-height: 55px;
     font-size: 24px;
     color: #fff;
     line-height: 26px;
     padding: 10px 10px 0 10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
 
 .picture{

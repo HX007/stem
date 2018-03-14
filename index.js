@@ -7,7 +7,7 @@ function luoji(){
 
 	//初始化轮播图
 	$(".lunbo").find(".bigBox .box").hide()//隐藏所有的,boxList
-
+	// $(".lunbo").find(".bigBox .section .four img").hide()
 	for(var a=0;a<$(".lunbo").length;a++){
 		var $cont = $(".lunbo").eq(a).find(".bigBox .box").length
 		//初始化span点击小方块
@@ -15,6 +15,7 @@ function luoji(){
 			var $createSpan = $("<span></span>")//创建
 			$createSpan.attr("index",b)	//设置非法属性
 			$createSpan.appendTo($(".lunbo").eq(a).find(".dot"))
+			// $(".lunbo .box").eq(b).find(".four img").eq(0).show() //默认显示第一个
 		}
 		$(".lunbo").eq(a).find(".dot span").eq(0).addClass("focus")
 		$(".lunbo").eq(a).find(".bigBox .box").eq(0).show()//默认显示box
@@ -92,7 +93,6 @@ function luoji(){
 	$(".lunbo").eq(0).mouseleave(function(){
 		autoPlay()	
 	})
-
 	// 第一个轮播图右边的小图片，鼠标移上主要核心
 	$(".lunbo").eq(0).find(".bigBox.one .box").mouseenter(function(){
 		var $imgImgList = $(this).find(".img img")	//找到中间的大图片
@@ -109,7 +109,6 @@ function luoji(){
 		})
 		$pickureImgList.mouseleave(function(){
 			$imgImgList.hide()
-			console.log(fourImg[0])
 			$imgImgList.eq(0).fadeIn() //让第一个默认显示
 		})
 	})
