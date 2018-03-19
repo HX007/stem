@@ -92,12 +92,14 @@ function callbackfn(data){
 		bigBoxOne.appendChild(newBox) //将克隆出来的box插入进去
 	}
 	originalBox.parentNode.removeChild(originalBox) //删除原版
-	luoji()//执行逻辑
+
+	luoji()//调用轮播图的执行逻辑
 
 
 
 
-	// 清理好 要发送请求的数据
+	// 历史浏览记录 ：
+	 // 清理好 要发送请求的数据
 	var ArrayGame = []  //初始化数组 要请求的数据 ID
 	//如果页面中存在cookie(属性名为ID),将cookie 做为字符串拿出来转换成数组 并赋值给 数组ArrayGame
 	if(acquireCookie("ID")){
@@ -132,7 +134,6 @@ function callbackfn(data){
 scr2 = document.createElement('script')
 scr2.setAttribute("src","http://192.168.1.100:81?callback=receptionId&gameId=" + acquireCookie("ID"))
 document.getElementsByTagName("head")[0].appendChild(scr2)
-
 
 function receptionId(data){
 	// console.log(data.length)
