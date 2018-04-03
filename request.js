@@ -1,6 +1,6 @@
 
 var scr1 = document.createElement('script')
-scr1.setAttribute("src","http://192.168.1.100:81?callback=callbackfn")
+scr1.setAttribute("src","http://ie19852360.51mypc.cn?callback=callbackfn")
 document.getElementsByTagName("head")[0].appendChild(scr1)
 
 var bigBoxOne= document.querySelectorAll('.bigBox.one')[0]//第一个轮播图
@@ -41,6 +41,12 @@ function callbackfn(data){
 			if(data[i].platform[j]=="Steam"){
 				newBox.querySelectorAll(".xiaotubiao span")[j].className = "linux"
 			}
+			/*if(){
+				newBox.querySelectorAll(".xiaotubiao span")[j].className = "sanjiao"
+			}
+			if(){
+				newBox.querySelectorAll(".xiaotubiao span")[j].className = "vR"
+			}*/
 		}
 
 		// 弹出框部分
@@ -56,7 +62,6 @@ function callbackfn(data){
 
 		var appraise = ["好评如潮","特别好评","多半好评","褒贬不一","多半差评","差评如潮","无评论"]
 		newBox.querySelectorAll(".section .estimate")[0].innerHTML = appraise[data[i].evaluate-1]  //评价
-		// console.log(data[i].evaluate)
 
 		//判断颜色
 		if(data[i].evaluate<4){
@@ -91,6 +96,7 @@ function callbackfn(data){
 		label.parentNode.removeChild(label) //删除模板标签
 		bigBoxOne.appendChild(newBox) //将克隆出来的box插入进去
 	}
+	
 	originalBox.parentNode.removeChild(originalBox) //删除原版
 
 	luoji()//调用轮播图的执行逻辑
@@ -132,7 +138,7 @@ function callbackfn(data){
 
 //浏览记录   发送数据请求	
 scr2 = document.createElement('script')
-scr2.setAttribute("src","http://192.168.1.100:81?callback=receptionId&gameId=" + acquireCookie("ID"))
+scr2.setAttribute("src","http://ie19852360.51mypc.cn?callback=receptionId&gameId=" + acquireCookie("ID"))
 document.getElementsByTagName("head")[0].appendChild(scr2)
 
 function receptionId(data){

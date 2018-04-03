@@ -1,10 +1,11 @@
+/***********************************首页开始*********************************/
+
+/*****************pc端开始*******************/
 // active侧边栏加小图片
 for(var a=0;a<$(".activeText").find("i").length;a++){
 	$(".activeText").find("i")[a].style.backgroundPosition = -16*a+"px"+" 0px"
 }
-
 function luoji(){
-
 	//初始化轮播图
 	$(".lunbo").find(".bigBox .box").hide()//隐藏所有的,boxList
 	// $(".lunbo").find(".bigBox .section .four img").hide()
@@ -121,6 +122,7 @@ function luoji(){
 	function  revealPopover(age3,age4,age5){
 		var x=0;
 		age3.mouseenter(function(){
+			age3.find(age4).stop()
 			//让右边section小区块显示
 			$(this).find(age4).fadeIn()
 			//获取四张图片
@@ -155,10 +157,90 @@ function luoji(){
 	$fourList = $section.find(".four img")
 	revealPopover($pass,$section,$fourList)
 	concealPopover($pass,$section)
+
+
+
+
+	// 加载中动画
+	$("#all").remove()
 }
 
 
-//*******************选项卡   新品与热门商品************************
+
+/*******手机版开始*******/
+if($("body").width()<=480){
+	$(".nav li").click(function(){
+		$(".nav li").animate({height:"37px"})
+		if($(this).hasClass("focus")){
+			$(this).animate({height:"37px"})
+			$(this).removeClass("focus")
+		}
+		else{
+			$(".nav li").removeClass("focus")
+			$(this).addClass("focus")
+			var height = $(this).find(".erji").height() + 37
+			$(this).animate({height:height})
+		}
+	})
+}
+
+
+
+			
+// 点击出现或隐藏侧导航
+$(".sangang").click(function(){
+	$(".header ul").css({
+		height:$("html").height()
+	})
+
+	$(".top ul").animate({left:0})
+	$(".zhezhao").css({
+		width: $("html").width(),
+		height: $("html").height(),
+	})
+	$(".zhezhao").click(function(){
+		$(".dianTwo").css({backgroundColor: "#171a21"}).animate({height:"56px"},function(){
+			$(".top ul").animate({left:-280})
+		})
+		$(".zhezhao").css({
+			width: 0,
+			height: 0,
+		})
+	})
+})
+//侧导航下拉选项
+$(".dianTwo").click(function(){
+	$(".dianTwo").css({backgroundColor: "#171a21"}).animate({height:"56px"})
+	$(".dianTwo").find(".upDown").removeClass("focus")
+
+	if($(this).hasClass("focus")){
+		$(this).css({backgroundColor: "#171a21"}).animate({height:"56px"})
+		$(this).removeClass("focus")
+	}
+
+	else{
+		$(".dianTwo").removeClass("focus")
+		$(".dianTwo").find(".upDown").removeClass("focus")
+		$(this).addClass("focus")
+		$(this).find(".upDown").addClass("focus")
+		var height = $(this).find("a").length*43
+		$(this).css({backgroundColor: "#192533"}).animate({height:height})
+	}
+
+})
+
+/*******手机版结束*******/
+
+
+
+
+
+
+
+
+
+
+//****选项卡   新品与热门商品
 
 var $obtain = $(".tabs .option span")
 var $zhuTiFour = $(".tabs .zhuTiFour")
@@ -195,6 +277,44 @@ $(".somalList").mouseenter(function(){
 	$somalList.eq(q).addClass("hove")
 	$youList.eq(q).fadeIn()
 })
+
+/*****************pc端结束*******************/
+
+
+/***************ipad端开始***************/
+
+
+
+
+
+/***************ipad端结束***************/
+
+
+
+
+
+
+
+/***********************************首页结束*********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -4,197 +4,231 @@
 	<meta charset="UTF-8">
 	<title>欢迎来到 Stem</title>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<link rel="stylesheet" href="index.css">	
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet/less" href="pad.less">
+	<script src="less.min.js"></script>
 	<script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<div class="header">
-		<div class="centerTwo top">
-			<a href="index.html"><img src="images/log.png" alt=""></a>
-			<ul>
-				<li>
-					<a href="">商店</a>
-					<div class="erji">
-						<a href="">精选</a>
-						<a href="">探索</a>
-						<a href="">鉴赏家</a>
-						<a href="">愿望单</a>
-						<a href="">新闻</a>
-						<a href="">统计</a>
-					</div>
-				</li>
-				<li>
-					<a href="">社区</a>
-					<div class="erji shequ">
-						<a href="">主页</a>
-						<a href="">讨论</a>
-						<a href="">创意工坊</a>
-						<a href="">市场</a>
-						<a href="">实况直播</a>
-					</div>
-				</li>
-				<li><a href="">关于</a></li>
-				<li><a href="">客服</a></li>
-			</ul>
-			<div class="register">
-				<div class="install">
-					<a href=""><i></i>安装 Steam</a>
+<!-- 加载动画 -->
+<div id="all">
+	<div class="box box1">
+		<span></span>
+	</div>
+	<div class="box box2">
+		<span></span>
+	</div>
+	<div class="box box3">
+		<span></span>
+	</div>
+	<div class="box box4">
+		<span></span>
+	</div>
+	<div class="box box5">
+		<span></span>
+	</div>
+	<div class="box box6">
+		<span></span>
+	</div>
+	<div class="box box7">
+		<span></span>
+	</div>
+</div>
+<div class="header">
+	<div class="centerTwo top">
+		<a href="index.html"><img src="images/log.png" alt=""></a>
+		<span class="sangang pcHidden"><img src="images/sangang.png" alt=""></span>
+		<div class="zhezhao"></div>
+		<ul>
+			<li class="pcHidden"><a href="">登录</a></li>
+			<li class="dianTwo">
+				<a href="javascript:void(0)">商店 <i class="upDown pcHidden"></i></a>
+				<div class="erji">
+					<a href="">精选</a>
+					<a href="">探索</a>
+					<a href="">鉴赏家</a>
+					<a href="">愿望单</a>
+					<a href="">新闻</a>
+					<a href="">统计</a>
 				</div>
-				<div class="zhuce">
-					<a href="register.html">登录</a>
-					<em></em>
-					<a href="">语言<i></i></a>
+			</li>
+			<li class="dianTwo">
+				<a href="javascript:void(0)">社区 <i class="upDown pcHidden"></i></a>
+				<div class="erji shequ">
+					<a href="">主页</a>
+					<a href="">讨论</a>
+					<a href="">创意工坊</a>
+					<a href="">市场</a>
+					<a href="">实况直播</a>
 				</div>
+			</li>
+			<li class="padHidden"><a href="">关于</a></li>
+			<li><a href="">客服</a></li>
+			<li class="pcHidden">
+				<a href="">更改语言</a>
+				<a href="">查看桌面版网站</a>
+			</li>
+		</ul>
+		<div class="register padHidden">
+			<div class="install">
+				<a href=""><i></i>安装 Steam</a>
+			</div>
+			<div class="zhuce">
+				<a href="register.html">登录</a>
+				<em></em>
+				<a href="">语言<i></i></a>
 			</div>
 		</div>
 	</div>
-	<div class="partOne">
-		<div class="centerTwo content">
-			<div class="active">
-				<img src="images/stem001.png">
-				<div class="activeText">
-					<p>礼物卡</p>
-					<a href="">现已在 steam 上推出推荐</a>
-				</div>
-				<div class="activeText">
-					<p>由好友推荐</p>
-					<a href=""><i></i>由鉴赏家推荐</a>
-					<a href=""><i></i>标签</a>
-					<a href=""><i></i>探索队列</a>
-				</div>
-				<div class="activeText">
-					<p>探索队列</p>
-					<a href=""><i></i>推荐</a>
-					<a href=""><i></i>新品</a>
-				</div>
-				<div class="activeText">
-					<p>浏览分类</p>
-					<a href=""><i></i> 热销商品</a>
-					<a href=""><i></i> 最近更新</a>
-					<a href=""><i></i> 新品</a>
-					<a href=""><i></i> 即将推出</a>
-					<a href=""><i></i> 优惠</a>
-					<a href=""><i></i> 虚拟现实</a>
-					<a href=""><i></i> 支持 Steam 控制器</a>
-				</div>
-				<div class="activeText">
-					<p>按类型浏览</p>
-					<a href="">免费游玩</a>
-					<a href="">抢先体验</a>
-					<a href="">休闲</a>
-					<a href="">体育</a>
-					<a href="">冒险</a>
-					<a href="">动作</a>
-					<a href="">大型多人在线</a>
-					<a href="">模拟</a>
-					<a href="">独立</a>
-					<a href="">竞速</a>
-					<a href="">策略</a>
-					<a href="">角色扮演</a>
-				</div>
-				<div class="activeText examine">
-					<p>最近查看</p>
-					
-				</div>
+</div>
+<div class="partOne">
+	<div class="centerTwo content">
+		<div class="active padHidden">
+			<img src="images/stem001.png">
+			<div class="activeText">
+				<p>礼物卡</p>
+				<a href="">现已在 steam 上推出推荐</a>
 			</div>
-			<div class="nav">
-				<ul>
-					<li>
-						<a>您的商店 <i></i></a>
-						<div class="erji shangDian">
-							<a href="">商店主页</a>
-							<span class="hr"></span>
-							<a href="">最近查看多的</a>
-							<a href="">Steam 鉴赏家</a>
-							<a href="">最近更新</a>
-						</div>
-					</li>
-					<li>
-						<a>游戏 <i></i></a>
-						<div class="erji youXi">
-							<a href="">免费游玩</a>
-							<a href="">抢先体验</a>
-							<a href="">试玩</a>
-							<a href="">虚拟现实</a>
-							<a href="">支持 Steam 控制器</a>
-							<span class="hr"></span>
-							<p class="zhuSe">按类型浏览：</p>
-							<a href="">休闲</a>
-							<a href="">体育</a>
-							<a href="">冒险</a>
-							<a href="">动作</a>
-							<a href="">大型多人在线</a>
-							<a href="">模拟</a>
-							<a href="">独立</a>
-							<a href="">竞速</a>
-							<a href="">策略</a>
-							<a href="">角色扮演</a>
-							<span class="hr"></span>
-							<a href="">查看热门标签</a>
-							<span class="hrXi"></span>
-							<p class="zhuSe">按平台浏览：</p>
-							<a href="">Mac OS X</a>
-							<a href="">SteamOS + Linux</a>
-						</div>
-					</li>
-					<li>
-						<a>软件 <i></i></a>
-						<div class="erji ruanJian">
-							<a href="">软件中心</a>
-							<span class="hr"></span>
-							<a href="">动画制作與建模</a>
-							<a href="">实用工具</a>
-							<a href="">教育</a>
-							<a href="">游戏开发</a>
-							<a href="">照片编辑</a>
-							<a href="">网络出版</a>
-							<a href="">视频制作</a>
-							<a href="">设计与插画</a>
-							<a href="">音频制作</a>
-						</div>
-					</li>
-					<li>
-						<a>硬件 <i></i></a>
-						<div class="erji yingJian">
-							<a href="">Steam 控制器</a>
-							<a href="">Steam 流式盒</a>
-							<a href="">Steam 主机</a>
-							<a href="">HTC Vive</a>
-						</div>
-					</li>
-					<li>
-						<a>视频 <i></i></a>
-						<div class="erji shiPin">
-							<a href="">视频中心</a>
-							<span class="hr"></span>
-							<p class="zhuSe">按类型浏览：</p>
-							<a href="">电影</a>
-							<a href="">剧集</a>
-							<a href="">纪录片</a>
-							<a href="">游戏</a>
-							<a href="">教程</a>
-							<a href="">短片</a>
-							<span class="hr"></span>
-							<p class="zhuSe">按类型浏览：</p>
-							<a href="">动作</a>
-							<a href="">日本动画</a>
-							<a href="">欢乐</a>
-							<a href="">剧情</a>
-							<a href="">恐怖</a>
-							<a href="">科幻</a>
-						</div>
-					</li>
-					<li>
-						<a>新闻</a>
-					</li>
-				</ul>
-				<div class="input">
-					<input type="text" placeholder="搜索商店">
-					<img src="images/sousuo.png" alt="">
-				</div>
+			<div class="activeText">
+				<p>由好友推荐</p>
+				<a href=""><i></i>由鉴赏家推荐</a>
+				<a href=""><i></i>标签</a>
+				<a href=""><i></i>探索队列</a>
 			</div>
-			<div class="lunbo first">
-				<h2>精选和推荐</h2>
+			<div class="activeText">
+				<p>探索队列</p>
+				<a href=""><i></i>推荐</a>
+				<a href=""><i></i>新品</a>
+			</div>
+			<div class="activeText">
+				<p>浏览分类</p>
+				<a href=""><i></i> 热销商品</a>
+				<a href=""><i></i> 最近更新</a>
+				<a href=""><i></i> 新品</a>
+				<a href=""><i></i> 即将推出</a>
+				<a href=""><i></i> 优惠</a>
+				<a href=""><i></i> 虚拟现实</a>
+				<a href=""><i></i> 支持 Steam 控制器</a>
+			</div>
+			<div class="activeText">
+				<p>按类型浏览</p>
+				<a href="">免费游玩</a>
+				<a href="">抢先体验</a>
+				<a href="">休闲</a>
+				<a href="">体育</a>
+				<a href="">冒险</a>
+				<a href="">动作</a>
+				<a href="">大型多人在线</a>
+				<a href="">模拟</a>
+				<a href="">独立</a>
+				<a href="">竞速</a>
+				<a href="">策略</a>
+				<a href="">角色扮演</a>
+			</div>
+			<div class="activeText examine">
+				<p>最近查看</p>
+				
+			</div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li>
+					<a>您的商店 <i></i></a>
+					<div class="erji shangDian">
+						<a href="">商店主页</a>
+						<span class="hr"></span>
+						<a href="">最近查看多的</a>
+						<a href="">Steam 鉴赏家</a>
+						<a href="">最近更新</a>
+					</div>
+				</li>
+				<li>
+					<a>游戏 <i></i></a>
+					<div class="erji youXi">
+						<a href="">免费游玩</a>
+						<a href="">抢先体验</a>
+						<a href="">试玩</a>
+						<a href="">虚拟现实</a>
+						<a href="">支持 Steam 控制器</a>
+						<span class="hr"></span>
+						<p class="zhuSe">按类型浏览：</p>
+						<a href="">休闲</a>
+						<a href="">体育</a>
+						<a href="">冒险</a>
+						<a href="">动作</a>
+						<a href="">大型多人在线</a>
+						<a href="">模拟</a>
+						<a href="">独立</a>
+						<a href="">竞速</a>
+						<a href="">策略</a>
+						<a href="">角色扮演</a>
+						<span class="hr"></span>
+						<a href="">查看热门标签</a>
+						<span class="hrXi"></span>
+						<p class="zhuSe">按平台浏览：</p>
+						<a href="">Mac OS X</a>
+						<a href="">SteamOS + Linux</a>
+					</div>
+				</li>
+				<li>
+					<a>软件 <i></i></a>
+					<div class="erji ruanJian">
+						<a href="">软件中心</a>
+						<span class="hr"></span>
+						<a href="">动画制作與建模</a>
+						<a href="">实用工具</a>
+						<a href="">教育</a>
+						<a href="">游戏开发</a>
+						<a href="">照片编辑</a>
+						<a href="">网络出版</a>
+						<a href="">视频制作</a>
+						<a href="">设计与插画</a>
+						<a href="">音频制作</a>
+					</div>
+				</li>
+				<li>
+					<a>硬件 <i></i></a>
+					<div class="erji yingJian">
+						<a href="">Steam 控制器</a>
+						<a href="">Steam 流式盒</a>
+						<a href="">Steam 主机</a>
+						<a href="">HTC Vive</a>
+					</div>
+				</li>
+				<li>
+					<a>视频 <i></i></a>
+					<div class="erji shiPin">
+						<a href="">视频中心</a>
+						<span class="hr"></span>
+						<p class="zhuSe">按类型浏览：</p>
+						<a href="">电影</a>
+						<a href="">剧集</a>
+						<a href="">纪录片</a>
+						<a href="">游戏</a>
+						<a href="">教程</a>
+						<a href="">短片</a>
+						<span class="hr"></span>
+						<p class="zhuSe">按类型浏览：</p>
+						<a href="">动作</a>
+						<a href="">日本动画</a>
+						<a href="">欢乐</a>
+						<a href="">剧情</a>
+						<a href="">恐怖</a>
+						<a href="">科幻</a>
+					</div>
+				</li>
+				<li>
+					<a>新闻</a>
+				</li>
+			</ul>
+			<div class="input">
+				<input type="text" placeholder="搜索商店">
+				<img src="images/sousuo.png" alt="">
+			</div>
+		</div>
+		<div class="lunbo first">
+			<h2>精选和推荐</h2>
+			<div class="dingweiceng">
 				<div class="bigBox one">
 					<div class="box">
 						<div class="img">
@@ -205,7 +239,7 @@
 								<img src="" alt="">
 							</a>
 						</div>
-						<div class="fig">
+						<div class="fig somalPad">
 							<div class="gameName">FINAL FANTASY XII THE ZODIAC AGE</div>
 							<div class="picture">
 								<a href=""><img src="" alt=""></a>
@@ -227,10 +261,12 @@
 									<span></span>
 									<span></span>
 									<span></span>
+									<span></span>
+									<span></span>
 								</a>
 							</div>
 						</div>
-						<div class="section">
+						<div class="section padHidden  somalPad">
 							<div class="text">
 								<p class="first">Grand Theft Auto V</p>
 								<p class="somal">发行日期：<span class="date">2018年2月7日</span></p>
@@ -257,10 +293,12 @@
 					<div class="arrowsLeft"><div></div></div>
 					<div class="arrowsRight"><div></div></div>
 				</div>
-				<div class="dot"></div>
 			</div>
-			<div class="lunbo second">
-				<h2>特别优惠<a href=""><span>浏览所有</span></a></h2>
+			<div class="dot somalPad"></div>
+		</div>
+		<div class="lunbo second">
+			<h2>特别优惠<a href=""><span>浏览所有</span></a></h2>
+			<div class="dingweiceng">
 				<div class="bigBox two">
 					<div class="box">
 						<div class="sunbox tankuang">
@@ -276,7 +314,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="section">
+							<div class="section padHidden">
 								<div class="text">
 									<p class="first">Grand Theft Auto V</p>
 									<p class="somal">发行日期：2018年2月7日</p>
@@ -314,7 +352,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="section">
+							<div class="section padHidden">
 								<div class="text">
 									<p class="first">Grand Theft Auto V</p>
 									<p class="somal">发行日期：2018年2月7日</p>
@@ -355,7 +393,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="section">
+								<div class="section padHidden">
 									<div class="text">
 										<p class="first">Grand Theft Auto V</p>
 										<p class="somal">发行日期：2018年2月7日</p>
@@ -395,7 +433,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="section">
+								<div class="section padHidden">
 									<div class="text">
 										<p class="first">Grand Theft Auto V</p>
 										<p class="somal">发行日期：2018年2月7日</p>
@@ -433,11 +471,11 @@
 									<div class="span">
 										<span class="original">￥318</span>
 										<span class="current">￥254</span>
-
+			
 									</div>
 								</div>
 							</div>
-							<div class="section">
+							<div class="section padHidden">
 								<div class="text">
 									<p class="first">Grand Theft Auto V</p>
 									<p class="somal">发行日期：2018年2月7日</p>
@@ -478,7 +516,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="section">
+								<div class="section padHidden">
 									<div class="text">
 										<p class="first">Grand Theft Auto V</p>
 										<p class="somal">发行日期：2018年2月7日</p>
@@ -518,7 +556,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="section">
+								<div class="section padHidden">
 									<div class="text">
 										<p class="first">Grand Theft Auto V</p>
 										<p class="somal">发行日期：2018年2月7日</p>
@@ -560,7 +598,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="section">
+								<div class="section padHidden">
 									<div class="text">
 										<p class="first">Grand Theft Auto V</p>
 										<p class="somal">发行日期：2018年2月7日</p>
@@ -600,7 +638,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="section">
+								<div class="section padHidden">
 									<div class="text">
 										<p class="first">Grand Theft Auto V</p>
 										<p class="somal">发行日期：2018年2月7日</p>
@@ -627,22 +665,25 @@
 							</div>
 						</div>
 					</div>
-					<div class="arrowsLeft"><div></div></div>
-					<div class="arrowsRight"><div></div></div>
 				</div>
-				<div class="dot"></div>
+				<div class="arrowsLeft"><div></div></div>
+				<div class="arrowsRight"><div></div></div>
 			</div>
-			<div class="lunbo">
-				<h2>浏览 STEAM</h2>
-				<div class="liulan">
-					<span><a href="">新品</a></span>
-					<span><a href="">优惠</a></span>
-					<span><a href="">免费游戏</a></span>
-					<span><a href="">按用户标签</a></span>
-				</div>
+
+			<div class="dot somalPad"></div>
+		</div>
+		<div class="lunbo">
+			<h2>浏览 STEAM</h2>
+			<div class="liulan">
+				<span><a href="">新品</a></span>
+				<span><a href="">优惠</a></span>
+				<span><a href="">免费游戏</a></span>
+				<span><a href="">按用户标签</a></span>
 			</div>
-			<div class="lunbo third">
-				<h2><b>为您建议</b>鉴赏家</h2>
+		</div>
+		<div class="lunbo third">
+			<h2><b>为您建议</b>鉴赏家</h2>
+			<div class="dingweiceng">
 				<div class="bigBox Three">
 					<div class="box">
 						<div class="caption">
@@ -950,1790 +991,1913 @@
 							</div>
 						</div>
 					</div>
-					<div class="arrowsLeft"><div></div></div>
-					<div class="arrowsRight"><div></div></div>
 				</div>
-				<div class="dot"></div>
+				<div class="arrowsLeft"><div></div></div>
+				<div class="arrowsRight"><div></div></div>
 			</div>
+			<div class="dot somalPad"></div>
 		</div>
 	</div>
-	<div class="partTwo">
-		<div class="centerTwo">
-			<div class="tabs">
-				<div class="option">
-					<span>新品与热门商品</span>
-					<span>热销商品</span>
-					<span>即将推出</span>
-					<span>优惠</span>
+</div>
+<div class="partTwo">
+	<div class="centerTwo">
+		<div class="tabs">
+			<div class="option">
+				<span>新品与热门商品</span>
+				<span>热销商品</span>
+				<span>即将推出</span>
+				<span>优惠</span>
+			</div>
+			<div class="zhuTi">
+				<div class="zhuTiFour">
+					<div class="zuoCe">
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-01.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>				
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-02.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-03.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-04.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-05.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-06.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-07.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-08.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-09.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list1-10.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="xinpin">
+							查看更多:
+							<a href="">新品</a>
+						</div>
+					</div>
+					<div class="youCe somalPad">
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-01-1.jpg" alt="">
+									<img src="images/list1-01-2.jpg" alt="">
+									<img src="images/list1-01-3.jpg" alt="">
+									<img src="images/list1-01-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-02-1.jpg" alt="">
+									<img src="images/list1-02-2.jpg" alt="">
+									<img src="images/list1-02-3.jpg" alt="">
+									<img src="images/list1-02-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-03-1.jpg" alt="">
+									<img src="images/list1-03-2.jpg" alt="">
+									<img src="images/list1-03-3.jpg" alt="">
+									<img src="images/list1-03-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-04-1.jpg" alt="">
+									<img src="images/list1-04-2.jpg" alt="">
+									<img src="images/list1-04-3.jpg" alt="">
+									<img src="images/list1-04-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-05-1.jpg" alt="">
+									<img src="images/list1-05-2.jpg" alt="">
+									<img src="images/list1-05-3.jpg" alt="">
+									<img src="images/list1-05-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-06-1.jpg" alt="">
+									<img src="images/list1-06-2.jpg" alt="">
+									<img src="images/list1-06-3.jpg" alt="">
+									<img src="images/list1-06-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-07-1.jpg" alt="">
+									<img src="images/list1-07-2.jpg" alt="">
+									<img src="images/list1-07-3.jpg" alt="">
+									<img src="images/list1-07-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-08-1.jpg" alt="">
+									<img src="images/list1-08-2.jpg" alt="">
+									<img src="images/list1-08-3.jpg" alt="">
+									<img src="images/list1-08-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-09-1.jpg" alt="">
+									<img src="images/list1-09-2.jpg" alt="">
+									<img src="images/list1-09-3.jpg" alt="">
+									<img src="images/list1-09-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list1-10-1.jpg" alt="">
+									<img src="images/list1-10-2.jpg" alt="">
+									<img src="images/list1-10-3.jpg" alt="">
+									<img src="images/list1-10-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="zhuTi">
-					<div class="zhuTiFour">
-						<div class="zuoCe">
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-01.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>				
-											</div>
+				<div class="zhuTiFour">
+					<div class="zuoCe">
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-01.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>				
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-02.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-02.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-03.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-03.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-04.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-04.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-05.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-05.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-06.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-06.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-07.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-07.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-08.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-08.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-09.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-09.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list1-10.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list2-10.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
 										</div>
 									</div>
-								</a>
+								</div>
+							</a>
+						</div>
+						<div class="xinpin">
+							查看更多:
+							<a href="">新品</a>
+						</div>
+					</div>
+					<div class="youCe somalPad">
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="xinpin">
-								查看更多:
-								<a href="">新品</a>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-01-1.jpg" alt="">
+									<img src="images/list2-01-2.jpg" alt="">
+									<img src="images/list2-01-3.jpg" alt="">
+									<img src="images/list2-01-4.jpg" alt="">
+								</a>
 							</div>
 						</div>
-						<div class="youCe">
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-01-1.jpg" alt="">
-										<img src="images/list1-01-2.jpg" alt="">
-										<img src="images/list1-01-3.jpg" alt="">
-										<img src="images/list1-01-4.jpg" alt="">
-									</a>
-								</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-02-1.jpg" alt="">
-										<img src="images/list1-02-2.jpg" alt="">
-										<img src="images/list1-02-3.jpg" alt="">
-										<img src="images/list1-02-4.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-03-1.jpg" alt="">
-										<img src="images/list1-03-2.jpg" alt="">
-										<img src="images/list1-03-3.jpg" alt="">
-										<img src="images/list1-03-4.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-02-1.jpg" alt="">
+									<img src="images/list2-02-2.jpg" alt="">
+									<img src="images/list2-02-3.jpg" alt="">
+									<img src="images/list2-02-4.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-04-1.jpg" alt="">
-										<img src="images/list1-04-2.jpg" alt="">
-										<img src="images/list1-04-3.jpg" alt="">
-										<img src="images/list1-04-4.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-05-1.jpg" alt="">
-										<img src="images/list1-05-2.jpg" alt="">
-										<img src="images/list1-05-3.jpg" alt="">
-										<img src="images/list1-05-4.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-06-1.jpg" alt="">
-										<img src="images/list1-06-2.jpg" alt="">
-										<img src="images/list1-06-3.jpg" alt="">
-										<img src="images/list1-06-4.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-03-1.jpg" alt="">
+									<img src="images/list2-03-2.jpg" alt="">
+									<img src="images/list2-03-3.jpg" alt="">
+									<img src="images/list2-03-4.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-07-1.jpg" alt="">
-										<img src="images/list1-07-2.jpg" alt="">
-										<img src="images/list1-07-3.jpg" alt="">
-										<img src="images/list1-07-4.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-08-1.jpg" alt="">
-										<img src="images/list1-08-2.jpg" alt="">
-										<img src="images/list1-08-3.jpg" alt="">
-										<img src="images/list1-08-4.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-09-1.jpg" alt="">
-										<img src="images/list1-09-2.jpg" alt="">
-										<img src="images/list1-09-3.jpg" alt="">
-										<img src="images/list1-09-4.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-04-1.jpg" alt="">
+									<img src="images/list2-04-2.jpg" alt="">
+									<img src="images/list2-04-3.jpg" alt="">
+									<img src="images/list2-04-4.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list1-10-1.jpg" alt="">
-										<img src="images/list1-10-2.jpg" alt="">
-										<img src="images/list1-10-3.jpg" alt="">
-										<img src="images/list1-10-4.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-05-1.jpg" alt="">
+									<img src="images/list2-05-2.jpg" alt="">
+									<img src="images/list2-05-3.jpg" alt="">
+									<img src="images/list2-05-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-06-1.jpg" alt="">
+									<img src="images/list2-06-2.jpg" alt="">
+									<img src="images/list2-06-3.jpg" alt="">
+									<img src="images/list2-06-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-07-1.jpg" alt="">
+									<img src="images/list2-07-2.jpg" alt="">
+									<img src="images/list2-07-3.jpg" alt="">
+									<img src="images/list2-07-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-08-1.jpg" alt="">
+									<img src="images/list2-08-2.jpg" alt="">
+									<img src="images/list2-08-3.jpg" alt="">
+									<img src="images/list2-08-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-09-1.jpg" alt="">
+									<img src="images/list2-09-2.jpg" alt="">
+									<img src="images/list2-09-3.jpg" alt="">
+									<img src="images/list2-09-4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list2-10-1.jpg" alt="">
+									<img src="images/list2-10-2.jpg" alt="">
+									<img src="images/list2-10-3.jpg" alt="">
+									<img src="images/list2-10-4.jpg" alt="">
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="zhuTiFour">
-						<div class="zuoCe">
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-01.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>				
-											</div>
+				</div>
+				<div class="zhuTiFour">
+					<div class="zuoCe">
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-01.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>				
 										</div>
 									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-02.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-03.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-04.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-05.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-06.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-07.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-08.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-09.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list2-10.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="xinpin">
-								查看更多:
-								<a href="">新品</a>
-							</div>
+								</div>
+							</a>
 						</div>
-						<div class="youCe">
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-02.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-03.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-01-1.jpg" alt="">
-										<img src="images/list2-01-2.jpg" alt="">
-										<img src="images/list2-01-3.jpg" alt="">
-										<img src="images/list2-01-4.jpg" alt="">
-									</a>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-04.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-05.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-06.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-02-1.jpg" alt="">
-										<img src="images/list2-02-2.jpg" alt="">
-										<img src="images/list2-02-3.jpg" alt="">
-										<img src="images/list2-02-4.jpg" alt="">
-									</a>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-07.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-08.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-09.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-03-1.jpg" alt="">
-										<img src="images/list2-03-2.jpg" alt="">
-										<img src="images/list2-03-3.jpg" alt="">
-										<img src="images/list2-03-4.jpg" alt="">
-									</a>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list3-10.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-04-1.jpg" alt="">
-										<img src="images/list2-04-2.jpg" alt="">
-										<img src="images/list2-04-3.jpg" alt="">
-										<img src="images/list2-04-4.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-05-1.jpg" alt="">
-										<img src="images/list2-05-2.jpg" alt="">
-										<img src="images/list2-05-3.jpg" alt="">
-										<img src="images/list2-05-4.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-06-1.jpg" alt="">
-										<img src="images/list2-06-2.jpg" alt="">
-										<img src="images/list2-06-3.jpg" alt="">
-										<img src="images/list2-06-4.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-07-1.jpg" alt="">
-										<img src="images/list2-07-2.jpg" alt="">
-										<img src="images/list2-07-3.jpg" alt="">
-										<img src="images/list2-07-4.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-08-1.jpg" alt="">
-										<img src="images/list2-08-2.jpg" alt="">
-										<img src="images/list2-08-3.jpg" alt="">
-										<img src="images/list2-08-4.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-09-1.jpg" alt="">
-										<img src="images/list2-09-2.jpg" alt="">
-										<img src="images/list2-09-3.jpg" alt="">
-										<img src="images/list2-09-4.jpg" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list2-10-1.jpg" alt="">
-										<img src="images/list2-10-2.jpg" alt="">
-										<img src="images/list2-10-3.jpg" alt="">
-										<img src="images/list2-10-4.jpg" alt="">
-									</a>
-								</div>
-							</div>
+							</a>
+						</div>
+						<div class="xinpin">
+							查看更多:
+							<a href="">新品</a>
 						</div>
 					</div>
-					<div class="zhuTiFour">
-						<div class="zuoCe">
-							<div class="somalList">
-								<a href="" class="liebiao">
+					<div class="youCe somalPad">
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
 									<img src="images/list3-01.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>				
-											</div>
-										</div>
-									</div>
+									<img src="images/list3-01.jpg" alt="">
+									<img src="images/list3-01.jpg" alt="">
+									<img src="images/list3-01.jpg" alt="">
 								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-02.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-03.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-04.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-05.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-06.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-07.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-08.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-09.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list3-10.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="xinpin">
-								查看更多:
-								<a href="">新品</a>
 							</div>
 						</div>
-						<div class="youCe">
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-01.jpg" alt="">
-										<img src="images/list3-01.jpg" alt="">
-										<img src="images/list3-01.jpg" alt="">
-										<img src="images/list3-01.jpg" alt="">
-									</a>
-								</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-02.jpg" alt="">
-										<img src="images/list3-02.jpg" alt="">
-										<img src="images/list3-02.jpg" alt="">
-										<img src="images/list3-02.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-03.jpg" alt="">
-										<img src="images/list3-03.jpg" alt="">
-										<img src="images/list3-03.jpg" alt="">
-										<img src="images/list3-03.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-02.jpg" alt="">
+									<img src="images/list3-02.jpg" alt="">
+									<img src="images/list3-02.jpg" alt="">
+									<img src="images/list3-02.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-04.jpg" alt="">
-										<img src="images/list3-04.jpg" alt="">
-										<img src="images/list3-04.jpg" alt="">
-										<img src="images/list3-04.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-05.jpg" alt="">
-										<img src="images/list3-05.jpg" alt="">
-										<img src="images/list3-05.jpg" alt="">
-										<img src="images/list3-05.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-06.jpg" alt="">
-										<img src="images/list3-06.jpg" alt="">
-										<img src="images/list3-06.jpg" alt="">
-										<img src="images/list3-06.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-03.jpg" alt="">
+									<img src="images/list3-03.jpg" alt="">
+									<img src="images/list3-03.jpg" alt="">
+									<img src="images/list3-03.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-07.jpg" alt="">
-										<img src="images/list3-07.jpg" alt="">
-										<img src="images/list3-07.jpg" alt="">
-										<img src="images/list3-07.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-08.jpg" alt="">
-										<img src="images/list3-08.jpg" alt="">
-										<img src="images/list3-08.jpg" alt="">
-										<img src="images/list3-08.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-09.jpg" alt="">
-										<img src="images/list3-09.jpg" alt="">
-										<img src="images/list3-09.jpg" alt="">
-										<img src="images/list3-09.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-04.jpg" alt="">
+									<img src="images/list3-04.jpg" alt="">
+									<img src="images/list3-04.jpg" alt="">
+									<img src="images/list3-04.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list3-10.jpg" alt="">
-										<img src="images/list3-10.jpg" alt="">
-										<img src="images/list3-10.jpg" alt="">
-										<img src="images/list3-10.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-05.jpg" alt="">
+									<img src="images/list3-05.jpg" alt="">
+									<img src="images/list3-05.jpg" alt="">
+									<img src="images/list3-05.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-06.jpg" alt="">
+									<img src="images/list3-06.jpg" alt="">
+									<img src="images/list3-06.jpg" alt="">
+									<img src="images/list3-06.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-07.jpg" alt="">
+									<img src="images/list3-07.jpg" alt="">
+									<img src="images/list3-07.jpg" alt="">
+									<img src="images/list3-07.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-08.jpg" alt="">
+									<img src="images/list3-08.jpg" alt="">
+									<img src="images/list3-08.jpg" alt="">
+									<img src="images/list3-08.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-09.jpg" alt="">
+									<img src="images/list3-09.jpg" alt="">
+									<img src="images/list3-09.jpg" alt="">
+									<img src="images/list3-09.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list3-10.jpg" alt="">
+									<img src="images/list3-10.jpg" alt="">
+									<img src="images/list3-10.jpg" alt="">
+									<img src="images/list3-10.jpg" alt="">
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="zhuTiFour">
-						<div class="zuoCe">
-							<div class="somalList">
-								<a href="" class="liebiao">
+				</div>
+				<div class="zhuTiFour">
+					<div class="zuoCe">
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-01.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>				
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-02.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-03.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-04.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-05.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-06.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-07.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-08.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-09.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="somalList">
+							<a href="" class="liebiao">
+								<img src="images/list4-10.jpg" alt="">
+								<div class="tabitem">
+									<div class="tabtext">
+										<p class="title">Fable of the Sword</p>
+										<p>
+											<i class="win"></i>
+											<i class="mac"></i>
+											<i class="linux"></i>
+											<i class="vR"></i>
+											<i class="sanjiao"></i>
+										</p>
+										<p class="details">冒险, 角色扮演, 独立</p>
+									</div>
+									<div class="xijie">
+										<span class="range">-20%</span>
+										<div>
+											<span class="original">￥318</span>
+											<span class="current">￥254</span>												
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="xinpin">
+							查看更多:
+							<a href="">新品</a>
+						</div>
+					</div>
+					<div class="youCe somalPad">
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
 									<img src="images/list4-01.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>				
-											</div>
-										</div>
-									</div>
+									<img src="images/list4-01.jpg" alt="">
+									<img src="images/list4-01.jpg" alt="">
+									<img src="images/list4-01.jpg" alt="">
 								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-02.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-03.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-04.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-05.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-06.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-07.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-08.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-09.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="somalList">
-								<a href="" class="liebiao">
-									<img src="images/list4-10.jpg" alt="">
-									<div class="tabitem">
-										<div class="tabtext">
-											<p class="title">Fable of the Sword</p>
-											<p>
-												<i class="win"></i>
-												<i class="mac"></i>
-												<i class="linux"></i></p>
-											<p class="details">冒险, 角色扮演, 独立</p>
-										</div>
-										<div class="xijie">
-											<span class="range">-20%</span>
-											<div>
-												<span class="original">￥318</span>
-												<span class="current">￥254</span>												
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="xinpin">
-								查看更多:
-								<a href="">新品</a>
 							</div>
 						</div>
-						<div class="youCe">
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-01.jpg" alt="">
-										<img src="images/list4-01.jpg" alt="">
-										<img src="images/list4-01.jpg" alt="">
-										<img src="images/list4-01.jpg" alt="">
-									</a>
-								</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-02.jpg" alt="">
-										<img src="images/list4-02.jpg" alt="">
-										<img src="images/list4-02.jpg" alt="">
-										<img src="images/list4-02.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-03.jpg" alt="">
-										<img src="images/list4-03.jpg" alt="">
-										<img src="images/list4-03.jpg" alt="">
-										<img src="images/list4-03.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-02.jpg" alt="">
+									<img src="images/list4-02.jpg" alt="">
+									<img src="images/list4-02.jpg" alt="">
+									<img src="images/list4-02.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-04.jpg" alt="">
-										<img src="images/list4-04.jpg" alt="">
-										<img src="images/list4-04.jpg" alt="">
-										<img src="images/list4-04.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-05.jpg" alt="">
-										<img src="images/list4-05.jpg" alt="">
-										<img src="images/list4-05.jpg" alt="">
-										<img src="images/list4-05.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-06.jpg" alt="">
-										<img src="images/list4-06.jpg" alt="">
-										<img src="images/list4-06.jpg" alt="">
-										<img src="images/list4-06.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-03.jpg" alt="">
+									<img src="images/list4-03.jpg" alt="">
+									<img src="images/list4-03.jpg" alt="">
+									<img src="images/list4-03.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-07.jpg" alt="">
-										<img src="images/list4-07.jpg" alt="">
-										<img src="images/list4-07.jpg" alt="">
-										<img src="images/list4-07.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-08.jpg" alt="">
-										<img src="images/list4-08.jpg" alt="">
-										<img src="images/list4-08.jpg" alt="">
-										<img src="images/list4-08.jpg" alt="">
-									</a>
-								</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-09.jpg" alt="">
-										<img src="images/list4-09.jpg" alt="">
-										<img src="images/list4-09.jpg" alt="">
-										<img src="images/list4-09.jpg" alt="">
-									</a>
-								</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-04.jpg" alt="">
+									<img src="images/list4-04.jpg" alt="">
+									<img src="images/list4-04.jpg" alt="">
+									<img src="images/list4-04.jpg" alt="">
+								</a>
 							</div>
-							<div class="youList">
-								<h2>Fable of the Sword</h2>
-								<div class="summary">
-									<div class="summaryText">总体用户评测：</div>
-									<div class="review zhuSe">特别好评<span>（200）</span></div>
-								</div>
-								<div class="tags">
-									<a href="">冒险</a>
-									<a href="">独立</a>
-									<a href="">角色扮演</a>
-									<a href="">视觉小说</a>
-								</div>
-								<div class="youCeImg">
-									<a href="">
-										<img src="images/list4-10.jpg" alt="">
-										<img src="images/list4-10.jpg" alt="">
-										<img src="images/list4-10.jpg" alt="">
-										<img src="images/list4-10.jpg" alt="">
-									</a>
-								</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-05.jpg" alt="">
+									<img src="images/list4-05.jpg" alt="">
+									<img src="images/list4-05.jpg" alt="">
+									<img src="images/list4-05.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-06.jpg" alt="">
+									<img src="images/list4-06.jpg" alt="">
+									<img src="images/list4-06.jpg" alt="">
+									<img src="images/list4-06.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-07.jpg" alt="">
+									<img src="images/list4-07.jpg" alt="">
+									<img src="images/list4-07.jpg" alt="">
+									<img src="images/list4-07.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-08.jpg" alt="">
+									<img src="images/list4-08.jpg" alt="">
+									<img src="images/list4-08.jpg" alt="">
+									<img src="images/list4-08.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-09.jpg" alt="">
+									<img src="images/list4-09.jpg" alt="">
+									<img src="images/list4-09.jpg" alt="">
+									<img src="images/list4-09.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="youList">
+							<h2>Fable of the Sword</h2>
+							<div class="summary">
+								<div class="summaryText">总体用户评测：</div>
+								<div class="review zhuSe">特别好评<span>（200）</span></div>
+							</div>
+							<div class="tags">
+								<a href="">冒险</a>
+								<a href="">独立</a>
+								<a href="">角色扮演</a>
+								<a href="">视觉小说</a>
+							</div>
+							<div class="youCeImg">
+								<a href="">
+									<img src="images/list4-10.jpg" alt="">
+									<img src="images/list4-10.jpg" alt="">
+									<img src="images/list4-10.jpg" alt="">
+									<img src="images/list4-10.jpg" alt="">
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="lunbo fourth">
-				<h2>低于 ￥ 40 
-					<a href=""><span>低于￥20</span></a>
-					<a href=""><span>低于￥40</span></a>
-				</h2>
+		</div>
+		<div class="lunbo fourth">
+			<h2>低于 ￥ 40 
+				<a href=""><span>低于￥20</span></a>
+				<a href=""><span>低于￥40</span></a>
+			</h2>
+			<div class="dingweiceng">
 				<div class="bigBox four">
 					<div class="box">
 						<div class="flex">
@@ -2775,13 +2939,15 @@
 							</a>
 						</div>
 					</div>
-					<div class="arrowsLeft"><div></div></div>
-					<div class="arrowsRight"><div></div></div>
 				</div>
-				<div class="dot"></div>
+				<div class="arrowsLeft"><div></div></div>
+				<div class="arrowsRight"><div></div></div>
 			</div>
-			<div class="lunbo">
-				<h2>更新与优惠</h2>
+			<div class="dot somalPad"></div>
+		</div>
+		<div class="lunbo">
+			<h2>更新与优惠</h2>
+			<div class="dingweiceng">
 				<div class="tupian">
 					<a href="">
 						<img src="images/youhui01.jpg" alt="">
@@ -2813,45 +2979,48 @@
 					</a>
 				</div>
 			</div>
+
 		</div>
 	</div>
-	<div class="xunzhao">
-		<div class="centerTwo">
-			<div class="xian">
-				<p>正在寻找推荐 ?</p>
-			</div>
-			<p>登录以查看个性化推荐</p>
-			<button>登录</button>
-			<p>或者<span>注册</span>并免费加入 Steam</p>
+</div>
+<div class="xunzhao">
+	<div class="centerTwo">
+		<div class="xian">
+			<p>正在寻找推荐 ?</p>
 		</div>
+		<p>登录以查看个性化推荐</p>
+		<button>登录</button>
+		<p>或者<span>注册</span>并免费加入 Steam</p>
 	</div>
-	<div class="footer">
-		<div class="centerTwo">
-			<div class="footerTop">
-				<img src="images/logo_valve_footer.png" alt="">
-				<div class="xinxi">
-					<div>©2018 Valve Corporation。保留所有权利。所有商标均为其在美国及其它国家/地区的各自持有者所有。</div>
-					<div>所有的价格均已包含增值税（如适用）。
-						<a href="">隐私政策</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
-						<a href="">法律信息</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
-						<a href="">Steam订户协议</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
-						<a href="">退款</a>
-					</div>
+</div>
+<div class="footer somalPad">
+	<div class="centerTwo">
+		<div class="footerTop">
+			<img src="images/logo_valve_footer.png" alt="">
+			<div class="xinxi">
+				<div>©2018 Valve Corporation。保留所有权利。所有商标均为其在美国及其它国家/地区的各自持有者所有。</div>
+				<div>所有的价格均已包含增值税（如适用）。
+					<a href="">隐私政策</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
+					<a href="">法律信息</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
+					<a href="">Steam订户协议</a>&nbsp;&nbsp;|&nbsp;&nbsp; 
+					<a href="">退款</a>
 				</div>
-				<img src="images/logo_steam_footer.png" alt="" class="footerLog">
 			</div>
-			<ul class="footerBottom">
-				<li><a href="">关于 Valve</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-				<li><a href="">Steamworks</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-				<li><a href="">工作</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-				<li><a href="">Steam 分销</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-				<li><a href="">礼物卡</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-				<li><a href=""><img src="images/ico_facebook.gif" alt="">Steam</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-				<li><a href=""><img src="images/ico_twitter.gif" alt="">@steam_games</a></li>
-			</ul>
+			<img src="images/logo_steam_footer.png" alt="" class="footerLog">
 		</div>
+		<ul class="footerBottom">
+			<li><a href="">关于 Valve</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+			<li><a href="">Steamworks</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+			<li><a href="">工作</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+			<li><a href="">Steam 分销</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+			<li><a href="">礼物卡</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+			<li><a href=""><img src="images/ico_facebook.gif" alt="">Steam</a>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+			<li><a href=""><img src="images/ico_twitter.gif" alt="">@steam_games</a></li>
+		</ul>
 	</div>
-	<script src="index.js"></script>
-	<script src="request.js"></script>
+</div>
+
+<script src="index.js"></script>
+<script src="request.js"></script>
 </body>
 </html>
